@@ -1,0 +1,15 @@
+.contents.row
+  - @tweets.each do |tweet| 
+    .content_post.wow.bounce{:style => "background-image: url(#{tweet.image});"}
+      .more
+        %span= image_tag 'arrow_top.png'
+        %ul.more_list
+          %li 
+            = link_to '削除', "/tweets/#{tweet.id}", method: :delete
+      %span.name mita 
+      .text
+        = tweet.text
+        %br
+        = "today:#{tweet.time}h"
+        %br
+        = "残り: xxxh"
