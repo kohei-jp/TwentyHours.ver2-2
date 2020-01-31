@@ -1,0 +1,9 @@
+.contents.row.initial
+  %p.user_page
+    = @name 
+    さんの投稿一覧
+.contents.row
+  - @tweets.each do |tweet|
+    = render partial: "tweets/tweet", locals: { tweet: tweet}
+.contents.row.initial
+  = paginate(@tweets)

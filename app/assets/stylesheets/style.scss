@@ -52,7 +52,7 @@ line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
   color: $dark;
-  font-family: "serif";
+  font-family: "ほのか明朝";
   margin: 0;
 }
 
@@ -141,12 +141,13 @@ a {
   transform: scale(1);
 }
 
-// h1,h2,h3,h4,h5,h6 {
-// }
-
 .title {
   font-weight: bold;
 }
+
+// .text {
+//   color: gray;
+// }
 
 .title--big {
   font-size: 1.5em;
@@ -178,7 +179,7 @@ header.header {
       color: #fff;
       width: 100px;
       a {
-        font-family: monospace;
+        font-family: "ほのか明朝";
         color: #fff;
         display: block;
         width: 20px;
@@ -201,7 +202,7 @@ header.header {
     height: 100px;
     right: 0;
     span {
-      top: 5px;
+      top: 10px;
       display: block;
       float: left;
       margin-left: 30px;
@@ -210,6 +211,7 @@ header.header {
       font-size: 1em;
       cursor: pointer;
       position: relative;
+      color: #9ec34b;
       &:after {
         content: '▼';
         font-size: .7em;
@@ -401,7 +403,14 @@ div.contents.row {
   }
 } //div.content row用
 
-
+.initial {
+  display: initial;
+}
+.user_page {
+  margin: 20px auto;
+  color: white;
+  font-family: "ほのか明朝";
+}
 
 
 
@@ -461,7 +470,7 @@ div.contents_show.row {
       height: 100px;
       width: 80px;
       text-align: right;
-      &:hover ul.more_list {
+      &:hover ul.more_list_show {
         display: block;
       }
       ul.more_list_show {
@@ -547,6 +556,10 @@ div.contents_show.row {
   padding: 50px;
 }
 
+.pagination {
+  margin: 20px auto;
+  color: whitesmoke;
+}
 
 
 
@@ -589,6 +602,7 @@ form {
 .comments {
   padding: 5px;
   margin-top: 15px;
+  color: gray;
   a {
     color: $accent;
     &:hover {

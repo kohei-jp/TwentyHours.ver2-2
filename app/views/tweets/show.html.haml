@@ -5,15 +5,35 @@
       %ul.more_list_show
         %li
           = link_to '詳細', "/tweets/#{@tweet.id}", method: :get
-        %li
-          = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
-        %li 
-          = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
-    %span.name_show mita 
+        - if user_signed_in? && current_user.id == @tweet.user_id
+          %li
+            = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
+          %li 
+            = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
+    %span.name_show 
+      %a{:href => "/users/#{@tweet.user.id}"}
+        = @tweet.user.name
     .text_show
       = @tweet.text
       %br
       = "today:#{@tweet.time}h"
       %br
       = "残り: xxxh"
-= "li にdisplaynone がかかってて、カーソルonしても出て来ない。"
+  .container
+    - if current_user
+      = form_with(model: [@tweet, @comment], local: true) do |form|
+        = form.text_area :text, placeholder: "コメントする", row: "2"
+        = form.submit "SEND"
+    - else
+      %strong
+        %p ***コメントの投稿には新規登録/ログインが必要です。***
+
+    .comments
+      %h4 <コメント一覧>
+      - if @comments
+        - @comments.each do |comment|
+          %p
+            %strong
+              = link_to comment.user.name, "/users/#{comment.user_id}"
+              = comment.text
+

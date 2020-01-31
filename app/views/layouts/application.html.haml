@@ -14,7 +14,6 @@
         var wf = document.createElement('script');
         wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
           '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        -# webfontloaderという機能(読み込み速度がUP)
         wf.type = 'text/javascript';
         wf.async = 'true';
         var s = document.getElementsByTagName('script')[0];
@@ -28,7 +27,12 @@
           %a{:href => "/"} 20Hours
         - if user_signed_in?
           .user_nav.grid-6
-            = link_to "ログアウト", destroy_user_session_path, method: :delete
+            %span 
+              = current_user.name
+              %ul.user_info
+                %li 
+                  = link_to "マイページ", "/users/#{current_user.id}"
+                  = link_to "ログアウト", destroy_user_session_path, method: :delete
             = link_to  "Commit", "/tweets/new", class: "post"
         - else
           .grid-6

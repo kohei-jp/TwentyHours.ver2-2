@@ -1,19 +1,8 @@
+.contents.row.initial
+  %p.user_page
+    = "Everybady commit"
 .contents.row
   - @tweets.each do |tweet| 
-    .content_post.wow.bounce{:style => "background-image: url(#{tweet.image});"}
-      .more
-        %span= image_tag 'arrow_top.png'
-        %ul.more_list
-          %li
-            = link_to '詳細', "/tweets/#{tweet.id}", method: :get
-          %li
-            = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
-          %li 
-            = link_to '削除', "/tweets/#{tweet.id}", method: :delete
-      %span.name mita 
-      .text
-        = tweet.text
-        %br
-        = "today:#{tweet.time}h"
-        %br
-        = "残り: xxxh"
+    = render partial: "tweet", locals: { tweet: tweet}
+.contents.row.initial
+  = paginate(@tweets)
