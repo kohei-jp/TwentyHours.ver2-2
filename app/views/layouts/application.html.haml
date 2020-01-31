@@ -24,10 +24,17 @@
   %body
     %header.header
       .header__bar.row
-        %h1.grid-6
+        %h1.grid-7
           %a{:href => "/"} 20Hours
-        .user_nav.grid-6
-          %a.post{:href => "/tweets/new"} Commit
+        - if user_signed_in?
+          .user_nav.grid-6
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+            = link_to  "Commit", "/tweets/new", class: "post"
+        - else
+          .grid-6
+            = link_to "ログイン", new_user_session_path, class: 'post'
+            = link_to "新規登録", new_user_registration_path, class: 'post'
+
     = yield
     %footer
       %p

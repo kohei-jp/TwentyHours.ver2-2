@@ -1,0 +1,19 @@
+.contents_show.row
+  .content_post_show.wow.bounce{:style => "background-image: url(#{@tweet.image});"}
+    .more_show
+      %span= image_tag 'arrow_top.png'
+      %ul.more_list_show
+        %li
+          = link_to '詳細', "/tweets/#{@tweet.id}", method: :get
+        %li
+          = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
+        %li 
+          = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
+    %span.name_show mita 
+    .text_show
+      = @tweet.text
+      %br
+      = "today:#{@tweet.time}h"
+      %br
+      = "残り: xxxh"
+= "li にdisplaynone がかかってて、カーソルonしても出て来ない。"
