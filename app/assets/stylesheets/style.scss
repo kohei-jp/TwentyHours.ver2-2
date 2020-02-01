@@ -39,7 +39,7 @@ $white: white;
 
 body,html {
   height: 100%;
-  background-color: Gray;
+  background-color: $dark;
 }
 
 body {
@@ -405,9 +405,11 @@ div.contents.row {
 
 .initial {
   display: initial;
+  flex-wrap:initial;
 }
 .user_page {
-  margin: 20px auto;
+  // margin: 20px auto;
+  display: inline-block;
   color: white;
   font-family: "ほのか明朝";
 }
@@ -561,7 +563,30 @@ div.contents_show.row {
   color: whitesmoke;
 }
 
-
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  %p.user_page {
+    // margin: 20px auto;
+    display: inline-block;
+    color: white;
+    font-family: "ほのか明朝";
+  }
+  .search-form {
+    display: block;
+    text-align: center;
+    padding-top: 32px;
+    .search-input {
+      // width: 30%;
+      margin-right: 10px;
+    }
+  
+  //   .search-btn {
+  //     width: 10%;
+  //   }
+  }
+}
 
 
 
@@ -616,19 +641,6 @@ footer {
   color: $gray;
   p {
     text-align: center;
-  }
-}
-
-.search-form {
-  text-align: center;
-  padding-top: 32px;
-  .search-input {
-    width: 30%;
-    margin-right: 10px;
-  }
-
-  .search-btn {
-    width: 10%;
   }
 }
 
