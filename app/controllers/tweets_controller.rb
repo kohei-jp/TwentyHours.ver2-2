@@ -32,9 +32,13 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments.includes(:user)
   end
 
-  def search
-    @tweets = Tweet.search(params[:keyword])
-  end
+  # def search
+  #   @tweets = Tweet.search(params[:keyword])
+  #   respond_to do |format|
+  #     format.html
+  #     format.json
+  #   end
+  # end
 
   private
   def tweet_params

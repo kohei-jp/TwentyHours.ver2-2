@@ -3,6 +3,7 @@ class Tweet < ApplicationRecord
   validates:text, length: { maximum: 10 }
   belongs_to :user
   has_many :comments
+  belongs_to :tag
 
   def self.search(search)
     return Tweet.all unless search
