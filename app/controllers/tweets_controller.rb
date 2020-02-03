@@ -8,6 +8,7 @@ class TweetsController < ApplicationController
 
   def new
     @tweet = Tweet.new
+    @tweet.build_tag
   end
 
   def create
@@ -30,19 +31,12 @@ class TweetsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user)
+    @tag = @tweet.tag.includes(:user)
   end
-
-  # def search
-  #   @tweets = Tweet.search(params[:keyword])
-  #   respond_to do |format|
-  #     format.html
-  #     format.json
-  #   end
-  # end
 
   private
   def tweet_params
-    params.require(:tweet).permit(:image, :text, :time).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:image, :text, :time, tag_attributes: [:tag_name]).merge(user_id: current_user.id)
   end
 
   def set_tweet

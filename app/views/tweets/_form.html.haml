@@ -1,5 +1,8 @@
--# = form.text_field :tag, placeholder: "tag"
+
 = form.number_field :time, placeholder: "Time", step: "0.1"
+= form.fields_for :tag do |tag_form|
+  = tag_form.text_field :tag_name, placeholder: "tag"
 = form.text_field :image, placeholder: "Image Url"
 = form.text_area :text, placeholder: "comment", rows: "10"
+-# = f.form.text_field :tag, placeholder: "tag"
 = form.submit "SEND"
