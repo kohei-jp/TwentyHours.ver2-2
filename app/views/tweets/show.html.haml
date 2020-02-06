@@ -1,5 +1,7 @@
 .contents_show.row
   .content_post_show.wow.bounce{:style => "background-image: url(#{@tweet.image});"}
+    %span.tag 
+      = @tag.tag_name
     .more_show
       %span= image_tag 'arrow_top.png'
       %ul.more_list_show
@@ -18,7 +20,7 @@
       %br
       = "today:#{@tweet.time}h"
       %br
-      = "残り: #{@tag}"
+      = "残り: xx[h]"
   .container
     - if current_user
       = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|

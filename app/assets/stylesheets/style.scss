@@ -58,7 +58,7 @@ line-height: 1.57;
 
 a {
   text-decoration: none;
-  color: $dark;
+  color: lightgray;
   // @extend .transition;
   &:hover {
     color: $accent;
@@ -267,6 +267,7 @@ header.header {
 div.contents.row {
   display: flex;
   flex-wrap:wrap;/*回り込み有効化*/
+  color : black;
   
   h2 {
     // @include boxBase(20px 0, 0);
@@ -312,6 +313,12 @@ div.contents.row {
       left: 10px;
       font-size: 12px;
       text-transform: lowercase;
+    }
+
+    .tag_index {
+      position: absolute;
+      top: 10px;
+      left: 10px;
     }
 
     .more {
@@ -494,6 +501,7 @@ div.contents_show.row {
           a {
             display: block;
             padding: 5px;
+            color: lightgray;
             &:hover {
               background-color: $accent;
               color: #fff;
@@ -516,6 +524,12 @@ div.contents_show.row {
       font-weight: bold;
       text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
     }
+
+    span.tag {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
     span.name_show {
       position: absolute;
       right: 20px;
@@ -551,8 +565,6 @@ div.contents_show.row {
     }
   }
 } //div.content row用 show画面用
-
-
 
 .devise_space {
   padding: 50px;

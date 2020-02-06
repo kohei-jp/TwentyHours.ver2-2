@@ -3,7 +3,8 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @tweets = Tweet.includes(:user).order("created_at DESC").page(params[:page]).per(9)
+    @tweets = Tweet.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
+    @times = Tweet.group('user_id, tag_id').sum(:time)
   end
 
   def new
@@ -12,7 +13,12 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweet_params)
+    @tweet = Tweet.new(tweet_params)
+    if @tweet.save
+      redirect_to root_path
+    else
+      render action: :new
+    end
   end
 
   def edit
@@ -31,7 +37,7 @@ class TweetsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user)
-    @tag = @tweet.tag.includes(:user)
+    @tag = @tweet.tag
   end
 
   private

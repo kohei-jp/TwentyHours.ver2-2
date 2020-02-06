@@ -1,4 +1,6 @@
 .content_post.wow.bounce{:style => "background-image: url(#{tweet.image});"}
+  .tag_index
+    = tweet.tag.tag_name
   .more
     %span= image_tag 'arrow_top.png'
     %ul.more_list
@@ -17,4 +19,4 @@
     %br
     = "today:#{tweet.time}h"
     %br
-    = "残り: xxxh"
+    = "残り: #{ 20 - time[1] }h"
