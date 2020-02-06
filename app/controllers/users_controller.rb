@@ -5,5 +5,12 @@ class UsersController < ApplicationController
     @tags = user.tags #これでいいはず(リレーションが上手くいっていれば)
     @name = user.name
     @tweets = user.tweets.page(params[:page]).per(9).order("created_at DESC")
+    @times = Tweet.group('user_id, tag_id').sum(:time)
   end
+
+  def calc_total
+    tweets.joins(:tags)
+      .group(Tweets.arel_table[:id]).select('project_users.*, sum(work_time) as sum_work_times, sum(extra_cost) as sum_extra_costs')
+  end
+
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'tweets#index'
+  root to: 'tops#index'
   namespace :tweets do
     resources :searches, only: :index
   end

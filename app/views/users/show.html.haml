@@ -1,12 +1,34 @@
 .contents.row.initial
   %p.user_page
     = @name 
-    さんの投稿一覧
+    さんのスキル一覧
 .contents.row
-  - @tags.each do |t|
-    = t.tag_name
+  -# .tag_post
+  -# - @tags.each do |t|
+  -#   = t.tag_name
+  -# - @times.each do |time|
+  -#   = time[1]
 
-  -# - @tweets.each do |tweet|
-  -#   = render partial: "tweets/tweet", locals: { tweet: tweet}
-.contents.row.initial
-  = paginate(@tweets)
+  - @tweets.zip(@times).each do |tweet,time| 
+    .content_post{:style => "background-image: url(#{tweet.image});"}
+      .my_tag
+        = tweet.tag.tag_name
+      .more
+        %span= image_tag 'arrow_top.png'
+        %ul.more_list
+          %li
+            = link_to '詳細', "/tweets/#{tweet.id}", method: :get
+          - if user_signed_in? && current_user.id == tweet.user_id
+            %li
+              = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
+            %li 
+              = link_to '削除', "/tweets/#{tweet.id}", method: :delete
+      %br
+      .last_time
+        = time[1] 
+        h 
+      %br
+      .last_bar
+        20h
+  .contents.row.initial
+    = paginate(@tweets)

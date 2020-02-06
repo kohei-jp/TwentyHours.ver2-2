@@ -1,4 +1,5 @@
 @import "compass";
+@import url("tops.scss");
 
 /*
  * "ほのか明朝" licensed under the IPA Font License Agreement v1.0
@@ -37,7 +38,7 @@ $white: white;
   margin: $margin;
 }
 
-body,html {
+body {
   height: 100%;
   background-color: $dark;
 }
@@ -80,9 +81,6 @@ a {
 ::selection {
   background: $gray;
 }
-
-
-
 
 
 
@@ -259,6 +257,8 @@ header.header {
     right: 0;
   }
 }
+
+
 
 
 
@@ -600,7 +600,31 @@ div.contents_show.row {
   }
 }
 
+.my_tag {
+  position: absolute;
+  left: 60px;
+  font-size: 20px;
+}
 
+.last_time {
+  position: absolute;
+  left: 80px;
+  top: 75px;
+  font-size: 20px;
+}
+
+.last_bar {
+  position: absolute;
+  top: 110px;
+  width: 120px;
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+  border-top: solid;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
 
 
 form {
@@ -655,4 +679,6 @@ footer {
     text-align: center;
   }
 }
+
+
 
