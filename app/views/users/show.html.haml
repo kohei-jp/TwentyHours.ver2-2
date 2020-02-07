@@ -30,5 +30,15 @@
       %br
       .last_bar
         20h
+
+-# お気に入りしたリスト表示
+-# tabを分けて表示する様にする 上のフォーマットで
+  -# - @favorite_tweets.each do |t|
+  -#   %hr/
+  -#   %p
+  -#     %span お気に入りツイート内容
+  -#     = link_to t.text, tweet_path(t.id)
+
+
   .contents.row.initial
     = paginate(@tweets)

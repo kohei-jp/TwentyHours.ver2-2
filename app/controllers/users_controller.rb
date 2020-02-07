@@ -6,6 +6,10 @@ class UsersController < ApplicationController
     @name = user.name
     @tweets = user.tweets.page(params[:page]).per(9).order("created_at DESC")
     @times = Tweet.group('user_id, tag_id').sum(:time)
+
+    tweets = user.tweets #fav用
+    @favorite_tweets = user.favorite_tweets #fav用
+    # favorite_tweetsとは、user.rbで定義した、favしたtweetsテーブルのこと
   end
 
   def calc_total

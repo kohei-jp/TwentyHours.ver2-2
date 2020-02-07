@@ -672,6 +672,18 @@ form {
   }
 }
 
+.fav {
+  display: flex;
+  color: white;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+
+
+
 footer {
   @include boxBase;
   color: $gray;
