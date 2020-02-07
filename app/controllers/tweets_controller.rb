@@ -4,7 +4,8 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
-    @times = Tweet.group('user_id, tag_id').sum(:time)
+    @times = Tweet.joins(:tag).group('user_id').group('tag_name').sum(:time)
+    # binding.pry
   end
 
   def new
@@ -15,7 +16,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
-      redirect_to root_path
+      redirect_to tweets_path
     else
       render action: :new
     end

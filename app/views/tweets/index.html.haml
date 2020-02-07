@@ -5,7 +5,11 @@
     = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
     = form.submit "検索", class: "search-btn"
 .contents.row
+  -# - @tweets.each do |tweet|
+  -#   - time = @times[tweet.user_id, tweet.tag_name]
+    -# = "残り: #{20 - time }h"
   - @tweets.zip(@times).each do |tweet,time| 
+    -# = "残り: #{20 - time[1] }h"
     = render partial: "tweet", locals: { tweet: tweet, time: time}
 .contents.row.initial
   = paginate(@tweets)
