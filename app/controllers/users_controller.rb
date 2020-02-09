@@ -4,7 +4,8 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     @tags = user.tags #これでいいはず(リレーションが上手くいっていれば)
     @name = user.name
-    @tweets = user.tweets.page(params[:page]).per(9).order("created_at DESC")
+    # @tweets = user.tweets.page(params[:page]).per(9).order("created_at DESC")
+    @tweets = Tweet.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
     @times = Tweet.group('user_id, tag_id').sum(:time)
 
     tweets = user.tweets #fav用

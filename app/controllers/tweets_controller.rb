@@ -4,14 +4,14 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
-    @times = Tweet.joins(:tag).group('user_id').group('tag_name').sum(:time)
-    # binding.pry
+    @times = Tweet.joins(:tag, :user).group('name').group('tag_name').sum(:time)
   end
 
   def new
     @tweet = Tweet.new
     @tweet.build_tag
   end
+
 
   def create
     @tweet = Tweet.new(tweet_params)

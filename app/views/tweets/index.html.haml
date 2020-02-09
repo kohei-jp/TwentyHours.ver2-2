@@ -5,11 +5,52 @@
     = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
     = form.submit "検索", class: "search-btn"
 .contents.row
-  -# - @tweets.each do |tweet|
-  -#   - time = @times[tweet.user_id, tweet.tag_name]
-    -# = "残り: #{20 - time }h"
-  - @tweets.zip(@times).each do |tweet,time| 
-    -# = "残り: #{20 - time[1] }h"
-    = render partial: "tweet", locals: { tweet: tweet, time: time}
+  - @tweets.each do |tweet| 
+    = render partial: "tweet", locals: { tweet: tweet}
+    -# .content_post.wow.bounce{:style => "background-image: url(#{tweet.image});"}
+    -#   .tag_index
+    -#     = tweet.tag.tag_name
+    -#   .more
+    -#     %span= image_tag 'arrow_top.png'
+    -#     %ul.more_list
+    -#       %li
+    -#         = link_to '詳細', "/tweets/#{tweet.id}", method: :get
+    -#       - if user_signed_in? && current_user.id == tweet.user_id
+    -#         %li
+    -#           = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
+    -#         %li 
+    -#           = link_to '削除', "/tweets/#{tweet.id}", method: :delete
+    -#   %span.name 
+    -#     - if user_signed_in?
+    -#       - if tweet.favorited_by?(current_user)
+    -#         / ログインしているユーザーがファボしたかどうかで分岐
+    -#         .fav
+    -#           %span いいね解除:
+    -#           = link_to tweet.favorites.count, tweet_favorites_path(tweet.id), method: :delete
+    -#       - else
+    -#         .fav
+    -#           %span いいね登録:
+    -#           = link_to tweet.favorites.count, tweet_favorites_path(tweet.id), method: :post
+    -#     - else
+    -#       %p
+    -#         %span お気に入り数:
+    -#         = tweet.favorites.count
+
+    -#     %a{:href => "/users/#{tweet.user.id}"}
+    -#       = tweet.user.name
+    -#   .text
+    -#     = tweet.text
+    -#     %br
+    -#     = "today:#{tweet.time}h"
+
+  %h1.title <みんなのスキル習得状況> 
+  .attive
+    - @times.each do |array, hour|
+      - name = array[0]
+      - subject = array[1]
+      ・"#{name}さんは "#{subject}" を合計#{hour}時間勉強しました。残り"#{ 20 - hour}時間"で取得です！"
+      %br
+
+
 .contents.row.initial
   = paginate(@tweets)

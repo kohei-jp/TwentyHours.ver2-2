@@ -1,35 +1,79 @@
 .contents.row.initial
   %p.user_page
-    = @name 
-    さんのスキル一覧
-.contents.row
-  -# .tag_post
-  -# - @tags.each do |t|
-  -#   = t.tag_name
-  -# - @times.each do |time|
-  -#   = time[1]
+    = "#{@name}さんのスキル一覧"
 
-  - @tweets.zip(@times).each do |tweet,time| 
-    .content_post{:style => "background-image: url(#{tweet.image});"}
-      .my_tag
-        = tweet.tag.tag_name
-      .more
-        %span= image_tag 'arrow_top.png'
-        %ul.more_list
-          %li
-            = link_to '詳細', "/tweets/#{tweet.id}", method: :get
-          - if user_signed_in? && current_user.id == tweet.user_id
-            %li
-              = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
-            %li 
-              = link_to '削除', "/tweets/#{tweet.id}", method: :delete
-      %br
-      .last_time
-        = time[1] 
-        h 
-      %br
-      .last_bar
-        20h
+.contents.row
+  
+  .cp_tab
+    %input#tab1_1{"aria-controls" => "first_tab01", :checked => "checked", :name => "cp_tab", :type => "radio"}/
+    %label{:for => "tab1_1"} 自分の投稿
+    %input#tab1_2{"aria-controls" => "second_tab01", :name => "cp_tab", :type => "radio"}/
+    %label{:for => "tab1_2"} お気に入り
+    %input#tab1_3{"aria-controls" => "third_tab01", :name => "cp_tab", :type => "radio"}/
+    %label{:for => "tab1_3"} フォロー
+    %input#tab1_4{"aria-controls" => "force_tab01", :name => "cp_tab", :type => "radio"}/
+    %label{:for => "tab1_4"} フォロワー
+    .cp_tabpanels
+      -# 自分の投稿
+      #first_tab01.cp_tabpanel
+        - @tweets.zip(@times).each do |tweet,time| 
+          .content_post-user{:style => "background-image: url(#{tweet.image});"}
+            .my_tag
+              = tweet.tag.tag_name
+            .more
+              %span= image_tag 'arrow_top.png'
+              %ul.more_list
+                %li
+                  = link_to '詳細', "/tweets/#{tweet.id}", method: :get
+                - if user_signed_in? && current_user.id == tweet.user_id
+                  %li
+                    = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
+                  %li 
+                    = link_to '削除', "/tweets/#{tweet.id}", method: :delete
+            %br
+            .last_time
+              = time[1] 
+              h 
+            %br
+            .last_bar
+              20h
+      -# お気に入り
+      #second_tab01.cp_tabpanel
+        - @favorite_tweets.zip(@times).each do |favorite,time| 
+          .content_post-user{:style => "background-image: url(#{favorite.image});"}
+            .my_tag
+              = favorite.tag.tag_name
+            .more
+              %span= image_tag 'arrow_top.png'
+              %ul.more_list
+                %li
+                  = link_to '詳細', "/tweets/#{favorite.id}", method: :get
+                - if user_signed_in? && current_user.id == favorite.user_id
+                  %li
+                    = link_to '編集', "/tweets/#{favorite.id}/edit", method: :get
+                  %li 
+                    = link_to '削除', "/tweets/#{favorite.id}", method: :delete
+            %br
+            .last_time
+              = time[1] 
+              h 
+            %br
+            .last_bar
+              20h
+            %span.name 
+              %a{:href => "/users/#{favorite.user.id}"}
+                = favorite.user.name
+      #third_tab01.cp_tabpanel
+        %h2 Third Tab
+        %p Third Tab text
+      #force_tab01.cp_tabpanel
+        %h2 Force Tab
+        %p Force Tab text
+
+
+
+
+
 
 -# お気に入りしたリスト表示
 -# tabを分けて表示する様にする 上のフォーマットで
@@ -38,7 +82,3 @@
   -#   %p
   -#     %span お気に入りツイート内容
   -#     = link_to t.text, tweet_path(t.id)
-
-
-  .contents.row.initial
-    = paginate(@tweets)

@@ -23,7 +23,7 @@
           %span いいね登録:
           = link_to tweet.favorites.count, tweet_favorites_path(tweet.id), method: :post
     - else
-      %p
+      .fav
         %span お気に入り数:
         = tweet.favorites.count
 
@@ -33,5 +33,5 @@
     = tweet.text
     %br
     = "today:#{tweet.time}h"
-    %br
+    -# %br
     -# = "残り: #{20 - time[1] }h"
