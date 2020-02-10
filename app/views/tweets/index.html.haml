@@ -20,7 +20,7 @@
               = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
             %li 
               = link_to '削除', "/tweets/#{tweet.id}", method: :delete
-      %span.name 
+      .name 
         - if user_signed_in?
           - if tweet.favorited_by?(current_user)
             / ログインしているユーザーがファボしたかどうかで分岐
@@ -39,7 +39,6 @@
             - else
               %p
               = link_to "フォローする", user_relationships_path(tweet.user.id), method: :post
-
         - else
           .fav
             %span お気に入り数:

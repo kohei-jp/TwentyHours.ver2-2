@@ -8,13 +8,21 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @tags = @user.tags #これでいいはず(リレーションが上手くいっていれば)
     @name = @user.name
-    @tweets = Tweet.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
+    @tweets = current_user.tweets.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
     @times = Tweet.group('user_id, tag_id').sum(:time)
 
     tweets = @user.tweets #fav用
     @favorite_tweets = @user.favorite_tweets #fav用
     # favorite_tweetsとは、user.rbで定義した、favしたtweetsテーブルのこと
     # binding.pry
+
+    # user = User.find(params[:id]) #follow用
+    @fallow_users = @user.followings #follow用
+
+    # user = User.find(params[:id]) #follower用
+    @follower_users = @user.followers #follower用
+
+
   end
 
   def calc_total
@@ -26,11 +34,13 @@ class UsersController < ApplicationController
 def follows
   user = User.find(params[:id])
   @users = user.followings
+  redirect_to tweet_path
 end
 
 def followers
   user = User.find(params[:id])
   @users = user.followers
+  redirect_to tweet_path
 end
 # ==============追加================
 

@@ -228,7 +228,7 @@ header.header {
       border-right: 1px solid #d8d8d8;
       box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
       li {
-        background-color: #f0f0f0;
+        background-color: black;
         a {
           display: block;
           padding: 10px 20px;
@@ -300,7 +300,11 @@ div.contents.row {
   display: flex;
   flex-wrap:wrap;/*回り込み有効化*/
   color : black;
-  
+  position: relative;
+  .select_follow{
+    position: absolute;
+    right: 0;
+  }
   h2 {
     // @include boxBase(20px 0, 0);
     font-weight: normal;
@@ -414,15 +418,18 @@ div.contents.row {
       font-weight: bold;
       text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
     }
-    span.name {
+    .name {
       position: absolute;
-      right: 20px;
+      right: 10px;
       bottom: 10px;
+      text-align: right;
       z-index: 2;
       font-size: 13px;
+
       a {
         display: block;
-        color: #aaa;
+        font-size: 9px;
+        color: white;
         &:hover {
           text-decoration: underline;
           color: #aaa;
@@ -461,7 +468,11 @@ div.contents.row {
   font-family: "ほのか明朝";
 }
 
-
+.user_info {
+  a{
+    color: #9ec34b;
+  }
+}
 
 
  //show画面用
@@ -757,7 +768,9 @@ footer {
 }
 .cp_tab .cp_tabpanel {
   display: none;
-  
+  span{
+    color: white;
+  }
 }
 .cp_tab > input:first-child:checked ~ .cp_tabpanels > .cp_tabpanel:first-child,
 .cp_tab > input:nth-child(3):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(2),

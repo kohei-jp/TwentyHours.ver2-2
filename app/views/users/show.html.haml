@@ -1,16 +1,14 @@
 .contents.row.initial
-  %p.user_page
-    = "#{@name}さんのスキル一覧"
+  .user_page
+    %p= "#{@name}さんのスキル一覧"
+  .select_follow
+    - if current_user != @user
+      - if @user.followed_by?(current_user)
+        %p= link_to "フォロー済み", user_relationships_path(@user.id), method: :delete
+      - else
+        %p= link_to "フォローする", user_relationships_path(@user.id), method: :post
 
 .contents.row
-  %p= link_to "フォロー", follows_user_path(@user.id)
-  %p= link_to "フォロワー", followers_user_path(@user.id)
-  - if current_user != @user
-    - if user.followed_by?(current_user)
-      %p= link_to "フォロー済み", user_relationships_path(@user.id), method: :delete
-    - else
-      %p= link_to "フォローする", user_relationships_path(@user.id), method: :post
-
   .cp_tab
     %input#tab1_1{"aria-controls" => "first_tab01", :checked => "checked", :name => "cp_tab", :type => "radio"}/
     %label{:for => "tab1_1"} 自分の投稿
@@ -23,7 +21,7 @@
     .cp_tabpanels
       -# 自分の投稿
       #first_tab01.cp_tabpanel
-        - @tweets.zip(@times).each do |tweet,time| 
+        - @tweets.each do |tweet| 
           .content_post-user{:style => "background-image: url(#{tweet.image});"}
             .my_tag
               = tweet.tag.tag_name
@@ -39,8 +37,7 @@
                     = link_to '削除', "/tweets/#{tweet.id}", method: :delete
             %br
             .last_time
-              = time[1] 
-              h 
+              = "#{tweet.time}h"
             %br
             .last_bar
               20h
@@ -70,27 +67,30 @@
             %span.name 
               %a{:href => "/users/#{favorite.user.id}"}
                 = favorite.user.name
+      -# フォロー
       #third_tab01.cp_tabpanel
-      -#   - @users.each do |user|
-      -#     %hr/
-      -#     %p
-      -#       %span email:
-      -#       = link_to user.email, user_path(user.id)
-      -#     - if current_user != user
-      -#       - if user.followed_by?(current_user)
-      -#         %p= link_to "フォロー済み", user_path(user.id), method: :delete
-      -#       - else
-      -#         %p= link_to "フォローする", user_path(user.id), method: :post
-      -# #force_tab01.cp_tabpanel
-      -#   - @users.each do |user|
-      -#     %hr/
-      -#     %p
-      -#       %span email:
-      -#       = link_to user.email, user_path(user.id)
-      -#     - if current_user != user
-      -#       - if user.followed_by?(current_user)
-      -#         %p= link_to "フォロー済み", user_path(user.id), method: :delete
-      -#       - else
-      -#         %p= link_to "フォローする", user_path(user.id), method: :post
+        - @fallow_users.each do |user|
+          
+          %p
+            %span Name:
+            = link_to "#{user.name}さん", user_path(user.id)
+          - if current_user != user
+            - if user.followed_by?(current_user)
+              %p= link_to "フォロー済み", user_relationships_path(user.id), method: :delete
+            - else
+              %p= link_to "フォローする", user_relationships_path(user.id), method: :post
+          %hr/
+      -# フォロワー
+      #force_tab01.cp_tabpanel
+        - @follower_users.each do |user|
+          %p
+            %span Name:
+            = link_to "#{user.name}さん", user_path(user.id)
+          - if current_user != user
+            - if user.followed_by?(current_user)
+              %p= link_to "フォロー済み", user_relationships_path(user.id), method: :delete
+            - else
+              %p= link_to "フォローする", user_relationships_path(user.id), method: :post
+          %hr/
 
 
