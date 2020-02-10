@@ -3,7 +3,14 @@
     = "#{@name}さんのスキル一覧"
 
 .contents.row
-  
+  %p= link_to "フォロー", follows_user_path(@user.id)
+  %p= link_to "フォロワー", followers_user_path(@user.id)
+  - if current_user != @user
+    - if user.followed_by?(current_user)
+      %p= link_to "フォロー済み", user_relationships_path(@user.id), method: :delete
+    - else
+      %p= link_to "フォローする", user_relationships_path(@user.id), method: :post
+
   .cp_tab
     %input#tab1_1{"aria-controls" => "first_tab01", :checked => "checked", :name => "cp_tab", :type => "radio"}/
     %label{:for => "tab1_1"} 自分の投稿
@@ -64,21 +71,26 @@
               %a{:href => "/users/#{favorite.user.id}"}
                 = favorite.user.name
       #third_tab01.cp_tabpanel
-        %h2 Third Tab
-        %p Third Tab text
-      #force_tab01.cp_tabpanel
-        %h2 Force Tab
-        %p Force Tab text
+      -#   - @users.each do |user|
+      -#     %hr/
+      -#     %p
+      -#       %span email:
+      -#       = link_to user.email, user_path(user.id)
+      -#     - if current_user != user
+      -#       - if user.followed_by?(current_user)
+      -#         %p= link_to "フォロー済み", user_path(user.id), method: :delete
+      -#       - else
+      -#         %p= link_to "フォローする", user_path(user.id), method: :post
+      -# #force_tab01.cp_tabpanel
+      -#   - @users.each do |user|
+      -#     %hr/
+      -#     %p
+      -#       %span email:
+      -#       = link_to user.email, user_path(user.id)
+      -#     - if current_user != user
+      -#       - if user.followed_by?(current_user)
+      -#         %p= link_to "フォロー済み", user_path(user.id), method: :delete
+      -#       - else
+      -#         %p= link_to "フォローする", user_path(user.id), method: :post
 
 
-
-
-
-
--# お気に入りしたリスト表示
--# tabを分けて表示する様にする 上のフォーマットで
-  -# - @favorite_tweets.each do |t|
-  -#   %hr/
-  -#   %p
-  -#     %span お気に入りツイート内容
-  -#     = link_to t.text, tweet_path(t.id)
