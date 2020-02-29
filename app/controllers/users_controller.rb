@@ -9,7 +9,8 @@ class UsersController < ApplicationController
     @tags = @user.tags #これでいいはず(リレーションが上手くいっていれば)
     @name = @user.name
     @tweets = current_user.tweets.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
-    @times = Tweet.group('user_id, tag_id').sum(:time)
+    @times = Tweet.group('user_id, tag_id').sum(:time) #fav用
+    @mytimes = @user.tweets.group_by_day(:created_at).sum(:time)
 
     tweets = @user.tweets #fav用
     @favorite_tweets = @user.favorite_tweets #fav用

@@ -67,6 +67,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    chartkick (3.3.1)
     childprocess (3.0.0)
     choice (0.2.0)
     chromedriver-helper (2.1.1)
@@ -114,6 +115,8 @@ GEM
     ffi (1.12.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    groupdate (5.0.0)
+      activesupport (>= 5)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -304,10 +307,12 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
+  chartkick
   chromedriver-helper
   coffee-rails (~> 4.2)
   compass-rails (= 3.1.0)
   devise
+  groupdate
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails

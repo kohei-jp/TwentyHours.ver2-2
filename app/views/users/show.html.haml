@@ -21,26 +21,9 @@
     .cp_tabpanels
       -# 自分の投稿
       #first_tab01.cp_tabpanel
-        - @tweets.each do |tweet| 
-          .content_post-user{:style => "background-image: url(#{tweet.image});"}
-            .my_tag
-              = tweet.tag.tag_name
-            .more
-              %span= image_tag 'arrow_top.png'
-              %ul.more_list
-                %li
-                  = link_to '詳細', "/tweets/#{tweet.id}", method: :get
-                - if user_signed_in? && current_user.id == tweet.user_id
-                  %li
-                    = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
-                  %li 
-                    = link_to '削除', "/tweets/#{tweet.id}", method: :delete
-            %br
-            .last_time
-              = "#{tweet.time}h"
-            %br
-            .last_bar
-              20h
+
+        <Totalコミット時間>
+        = line_chart @mytimes, min: 0, max: 20, width: "600px", height: "300px", colors: ["white", "#fff"]
       -# お気に入り
       #second_tab01.cp_tabpanel
         - @favorite_tweets.zip(@times).each do |favorite,time| 
