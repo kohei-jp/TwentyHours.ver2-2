@@ -1,20 +1,5 @@
 @import "compass";
-@import url("tops.scss");
-
-/*
- * "ほのか明朝" licensed under the IPA Font License Agreement v1.0
- * http://fontfree.me/966（配布元のURL）
- * http://ipafont.ipa.go.jp/（IPAフォントのURL）
- * http://ipafont.ipa.go.jp/ipa_font_license_v1.html（IPAフォントライセンスv1.0のURL）
- */
-@font-face {
-    font-family: 'ほのか明朝';
-    src: url('851H-kktt_004.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@import url(http://fonts.googleapis.com/css?family=Unica+One);
+// @import url("tops.scss");
 
 $accent: #57C3E9;
 $dark: #666;
@@ -44,7 +29,7 @@ body {
 
 body {
   padding-top: 60px;
-  // background-image: url(https://wonders-adventure.com/wp-content/uploads/2019/07/D69A9199-2-1050x700.jpg);
+
 }
 
 h1,h2,h3,h4,h5,h6,body {
@@ -59,7 +44,7 @@ line-height: 1.57;
 a {
   text-decoration: none;
   color: lightgray;
-  // @extend .transition;
+
   &:hover {
     color: $accent;
   }
@@ -69,10 +54,6 @@ a {
   font-weight: bold;
 }
 
-.serif {
-  font-family: 'ほのか明朝',serif;
-}
-
 .ultra {
   font-size: 2em !important;
 }
@@ -80,14 +61,6 @@ a {
 ::selection {
   background: $gray;
 }
-
-
-
-// .transition {
-//   @include transition-property(all);
-//   @include transition-duration(0.2s);
-//   @include transition-timing-function(linear);
-// }
 
 .btn-box {
   display: inline-block;
@@ -142,10 +115,6 @@ a {
   font-weight: bold;
 }
 
-// .text {
-//   color: gray;
-// }
-
 .title--big {
   font-size: 1.5em;
   font-weight: bold;
@@ -176,7 +145,6 @@ header.header {
       color: #fff;
       width: 100px;
       a {
-        font-family: "ほのか明朝";
         color: #fff;
         display: block;
         width: 20px;
@@ -269,10 +237,7 @@ header.header {
   height: 200px;
   overflow: scroll;
   width: 660px;
-  // font-family: monospace;
-  font-family: ほのか明朝;
   color: #9ec34b;
-  // overflow-y: scroll;
   white-space: nowrap;
 }
 
@@ -407,7 +372,6 @@ div.contents.row {
 
 
     p {
-      @extend .serif;
       position: absolute;
       left: 30px;
       // right: 100px;
@@ -564,7 +528,6 @@ div.contents_show.row {
 
 
     p {
-      @extend .serif;
       position: absolute;
       left: 30px;
       // right: 100px;
@@ -747,73 +710,6 @@ footer {
 
 
 
-.cp_tab *, .cp_tab *:before, .cp_tab *:after {
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-}
-.cp_tab {
-	margin: 1em auto;
-}
-.cp_tab > input[type='radio'] {
-	margin: 0;
-	padding: 0;
-	border: none;
-	border-radius: 0;
-	outline: none;
-	background: none;
-	-webkit-appearance: none;
-	        appearance: none;
-  display: none;
-  
-}
-.cp_tab .cp_tabpanel {
-  display: none;
-  span{
-    color: white;
-  }
-}
-.cp_tab > input:first-child:checked ~ .cp_tabpanels > .cp_tabpanel:first-child,
-.cp_tab > input:nth-child(3):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(2),
-.cp_tab > input:nth-child(5):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(3),
-.cp_tab > input:nth-child(7):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(4),
-.cp_tab > input:nth-child(9):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(5),
-.cp_tab > input:nth-child(11):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(6) {
-  display: block;
-  
-}
-.cp_tab > label {
-	position: relative;
-	display: inline-block;
-	padding: 15px;
-	cursor: pointer;
-	border: 1px solid transparent;
-  border-bottom: 0;
-  color: white;
-}
-.cp_tab > label:hover,
-.cp_tab > input:focus + label {
-	color: #0066cc;
-}
-.cp_tab > input:checked + label {
-	margin-bottom: -1px;
-	border-color: #cccccc;
-	border-bottom: 1px solid #ffffff;/*背景色と同じ*/
-	border-radius: 6px 6px 0 0;
-}
-.cp_tab .cp_tabpanel {
-	padding: 0.5em 1em;
-	border-top: 1px solid #cccccc;
-}
-@media (max-width: 480px) {
-	.cp_tab {
-		width: 100%;
-		font-size: 0.8em;
-	}
-	.cp_tab label {
-		padding: 0.5em;
-	}
-}
-
 .content_post-user {
   margin: 10px;
   padding: 30px;
@@ -895,7 +791,6 @@ footer {
 
 
   p {
-    @extend .serif;
     position: absolute;
     left: 30px;
     margin: 0;

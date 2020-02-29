@@ -69,7 +69,10 @@ gem 'sprockets', '3.7.2'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'devise'
-gem 'omniauth'
-gem 'omniauth-twitter'
 gem 'kaminari'
 gem 'jquery-rails'
+
+#omniauth
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'  
+gem "omniauth-rails_csrf_protection"
