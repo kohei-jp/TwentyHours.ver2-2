@@ -21,9 +21,47 @@
     .cp_tabpanels
       -# 自分の投稿
       #first_tab01.cp_tabpanel
+        -# = pie_chart(@pietimes)
+        //円グラフ
+        %ul.progress
+          - @pietimes.each do |key, value|
+            %li{"data-name" => "#{key}", "data-percent" => "#{value * 100 / 20} %"}
+              %svg{:viewbox => "-10 -10 220 220"}
+                %g{:fill => "none", "stroke-width" => "15", :transform => "translate(100,100)"}
+                  %path{:d => "M 0,-100 A 100,100 0 0,1 86.6,-50", :stroke => "url(#cl1)"}
+                  %path{:d => "M 86.6,-50 A 100,100 0 0,1 86.6,50", :stroke => "url(#cl2)"}
+                  %path{:d => "M 86.6,50 A 100,100 0 0,1 0,100", :stroke => "url(#cl3)"}
+                  %path{:d => "M 0,100 A 100,100 0 0,1 -86.6,50", :stroke => "url(#cl4)"}
+                  %path{:d => "M -86.6,50 A 100,100 0 0,1 -86.6,-50", :stroke => "url(#cl5)"}
+                  %path{:d => "M -86.6,-50 A 100,100 0 0,1 0,-100", :stroke => "url(#cl6)"}
+              %svg{:viewbox => "-10 -10 220 220"}
+                %path{:d => "M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z", "stroke-dashoffset" => "#{ 629 * value / 20 }"}
+            / Defining Angle Gradient Colors
+        %svg{:height => "0", :width => "0"}
+          %defs
+            %lineargradient#cl1{:gradientunits => "objectBoundingBox", :x1 => "0", :x2 => "1", :y1 => "0", :y2 => "1"}
+              %stop{"stop-color" => "#618099"}
+              %stop{:offset => "100%", "stop-color" => "#8e6677"}
+            %lineargradient#cl2{:gradientunits => "objectBoundingBox", :x1 => "0", :x2 => "0", :y1 => "0", :y2 => "1"}
+              %stop{"stop-color" => "#8e6677"}
+              %stop{:offset => "100%", "stop-color" => "#9b5e67"}
+            %lineargradient#cl3{:gradientunits => "objectBoundingBox", :x1 => "1", :x2 => "0", :y1 => "0", :y2 => "1"}
+              %stop{"stop-color" => "#9b5e67"}
+              %stop{:offset => "100%", "stop-color" => "#9c787a"}
+            %lineargradient#cl4{:gradientunits => "objectBoundingBox", :x1 => "1", :x2 => "0", :y1 => "1", :y2 => "0"}
+              %stop{"stop-color" => "#9c787a"}
+              %stop{:offset => "100%", "stop-color" => "#817a94"}
+            %lineargradient#cl5{:gradientunits => "objectBoundingBox", :x1 => "0", :x2 => "0", :y1 => "1", :y2 => "0"}
+              %stop{"stop-color" => "#817a94"}
+              %stop{:offset => "100%", "stop-color" => "#498a98"}
+            %lineargradient#cl6{:gradientunits => "objectBoundingBox", :x1 => "0", :x2 => "1", :y1 => "1", :y2 => "0"}
+              %stop{"stop-color" => "#498a98"}
+              %stop{:offset => "100%", "stop-color" => "#618099"}
+              // ここまで
+    
+          <Totalコミット時間>
+          = line_chart @mytimes, min: 0, max: 20, width: "600px", height: "300px", colors: ["white", "#fff"], xtitle: "Day", ytitle: "commit[hours]"
 
-        <Totalコミット時間>
-        = line_chart @mytimes, min: 0, max: 20, width: "600px", height: "300px", colors: ["white", "#fff"]
       -# お気に入り
       #second_tab01.cp_tabpanel
         - @favorite_tweets.zip(@times).each do |favorite,time| 
