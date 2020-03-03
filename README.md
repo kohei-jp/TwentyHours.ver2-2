@@ -52,7 +52,7 @@
 - Nginx, Unicorn  
 
 
-<p>
+<p text-align: center>
   <a href="https://rubyonrails.org/"><img src="https://meltingrabbit.com/blog/article/2018081501/top.jpg" width="80px;" /></a>
   <br>
   <a href="http://haml.info/"><img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="50px;" /></a>
