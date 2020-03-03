@@ -1,14 +1,14 @@
 # Twenty Hours
 「日々の学習」を、共有・分析するアプリ
-<img width="70%" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
+<img width="80%" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
 
 
-## <アプリ概要>
+## アプリ概要
 ①習得したいスキルをタグ付けして、学習時間と一緒に投稿。  
 ↓  
-②特徴としては、スキルを習得する際のノウハウを入れており、  
-  出来るだけハードルを低く、同じタグで「20時間」を目標に  
-  としている。  
+②特徴としては、スキルを習得する際のノウハウとして、
+  出来るだけハードルを低くし、同じタグで「20時間」を達成  
+  のゴールとしている。  
 ↓  
 ③スキルの習得する際のハードルを下げて、継続を促すアプリ。  
 ↓  
@@ -21,34 +21,34 @@
 
 
 ## 機能一覧
-・ユーザ登録、ログイン機能
-・ユーザー間でのフォロー、フォロワー機能
-・ツイート投稿機能
-・ツイート検索機能(インクリメンタルサーチ)
-・ツイートタグ付け機能
-・ツイートへのコメント(ajax)
-・ツイートへの良いね機能
-・タグ付けされたツイートの合計時間を円グラフ表示
-・日々の学習時間のグラフ表示
-・ページネーション機能(kaminari)
+・ユーザ登録、ログイン機能  
+・ユーザー間でのフォロー、フォロワー機能  
+・ツイート投稿機能  
+・ツイート検索機能(インクリメンタルサーチ)  
+・ツイートタグ付け機能  
+・ツイートへのコメント(ajax)  
+・ツイートへの良いね機能  
+・タグ付けされたツイートの合計時間を円グラフ表示  
+・日々の学習時間のグラフ表示  
+・ページネーション機能(kaminari)  
 
 
 ## 使用技術
-・Ruby 2.6.0
-・Rails 5.2.4
-・Haml/Scss
-・JQuary
-・GitHub, Git
-・Rspec
-・MySQL 5.6
-・AWS (今後搭載予定)
-  ・EC2
-  ・S3
-  ・Capstrano
-  ・ELB
-  ・AMI
-  ・Route53
-・Nginx, Unicorn
+・Ruby 2.6.0  
+・Rails 5.2.4  
+・Haml/Scss   
+・JQuary  
+・GitHub, Git  
+・Rspec  
+・MySQL 5.6  
+・AWS (今後搭載予定)  
+  ・EC2  
+  ・S3  
+  ・Capstrano  
+  ・ELB  
+  ・AMI  
+  ・Route53  
+・Nginx, Unicorn  
 
 
 <p align="center">
@@ -57,6 +57,7 @@
   <a href="http://haml.info/"><img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="50px;" /></a>
   <a href="https://sass-lang.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" height="50px;" /></a>
   <a href="https://jquery.com/"><img src="https://web-camp.io/magazine/wp-content/uploads/2017/03/JQuery_logo-1-1.png" height="50px;" /></a>
+  <a href="https://aws.amazon.com/jp/ec2/"><img src="https://ajike.github.io/images/posts/20180301/1.png" height="50px;" /></a>
 </p>
 
 
