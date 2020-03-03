@@ -1,5 +1,6 @@
 # Twenty Hours
 「日々の学習」を、共有・分析するアプリ
+<br>
 <img width="80%" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
 
 
@@ -34,21 +35,21 @@
 
 
 ## 使用技術
-・Ruby 2.6.0  
-・Rails 5.2.4  
-・Haml/Scss   
-・JQuary  
-・GitHub, Git  
-・Rspec  
-・MySQL 5.6  
-・AWS (今後搭載予定)  
-  ・EC2  
-  ・S3  
-  ・Capstrano  
-  ・ELB  
-  ・AMI  
-  ・Route53  
-・Nginx, Unicorn  
+- Ruby 2.6.0  
+- Rails 5.2.4  
+- Haml/Scss   
+- JQuary  
+- GitHub, Git  
+- Rspec  
+- MySQL 5.6  
+- AWS (今後搭載予定)  
+  - EC2  
+  - S3  
+  - Capstrano  
+  - ELB  
+  - AMI  
+  - Route53  
+- Nginx, Unicorn  
 
 
 <p align="center">
