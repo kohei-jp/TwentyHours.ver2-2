@@ -1,15 +1,15 @@
 # Twenty Hours
 「日々の学習」を、共有・分析するアプリ
 <br>
+
 <img width="80%" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
 
 
 ## アプリ概要
 ①習得したいスキルをタグ付けして、学習時間と一緒に投稿。  
 ↓  
-②特徴としては、スキルを習得する際のノウハウとして、
-  出来るだけハードルを低くし、同じタグで「20時間」を達成  
-  のゴールとしている。  
+②特徴としては、スキルを習得する際のノウハウとして、出来るだけハードルを低くし、  
+  同じタグで「20時間」を達成  のゴールとしている。  
 ↓  
 ③スキルの習得する際のハードルを下げて、継続を促すアプリ。  
 ↓  
@@ -52,7 +52,7 @@
 - Nginx, Unicorn  
 
 
-<p align="center">
+<p>
   <a href="https://rubyonrails.org/"><img src="https://meltingrabbit.com/blog/article/2018081501/top.jpg" width="80px;" /></a>
   <br>
   <a href="http://haml.info/"><img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="50px;" /></a>
