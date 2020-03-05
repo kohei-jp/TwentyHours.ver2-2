@@ -71,6 +71,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'kaminari'
 gem 'jquery-rails'
+gem 'font-awesome-sass'
 
 #omniauth
 gem 'omniauth-facebook'
@@ -80,3 +81,9 @@ gem "omniauth-rails_csrf_protection"
 # グラフ
 gem "chartkick"
 gem 'groupdate'
+
+# 画像
+gem 'carrierwave'
+gem 'mini_magick'
+# Form Helper
+gem 'simple_form'
