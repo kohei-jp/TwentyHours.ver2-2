@@ -16,8 +16,9 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
-      redirect_to tweets_path
+      redirect_to tweets_path, notice: 'メッセージが送信されました'
     else
+      flash.now[:alert] = 'メッセージを入力してください。'
       render action: :new
     end
   end

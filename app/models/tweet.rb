@@ -7,6 +7,8 @@ class Tweet < ApplicationRecord
   accepts_nested_attributes_for :tag
   has_many :favorites
 
+  mount_uploader :image, ImageUploader
+
   def self.search(search)
     return Tweet.all unless search
     Tweet.where('text LIKE(?)', "%#{search}%")
