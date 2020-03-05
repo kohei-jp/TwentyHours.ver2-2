@@ -11,7 +11,6 @@ class UsersController < ApplicationController
     @tweets = current_user.tweets.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
     @times = Tweet.group('user_id, tag_id').sum(:time) #fav用
     @mytimes = @user.tweets.group_by_day(:created_at).sum(:time).to_a
-    binding.pry
 
     # @pietimes = @tags.includes(:tweets).group_by(:tag_name).sum(:time) 上手くいかない
     @pietimes = @user.tweets.includes(:tag).group('tag_name').sum(:time).to_a
