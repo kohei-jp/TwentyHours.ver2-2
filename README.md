@@ -2,7 +2,7 @@
 「日々の学習」を、共有・分析するアプリ
 <br>
 
-<img width="80%" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
+<img style=" width: 80% display: block; text-align: center;" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
 
 
 ## アプリ概要
@@ -53,7 +53,7 @@
 
 
 <p text-align: center>
-  <a href="https://rubyonrails.org/"><img src="https://meltingrabbit.com/blog/article/2018081501/top.jpg" width="80px;" margin-left= "150px;" /></a>
+  <a href="https://rubyonrails.org/"><img src="https://meltingrabbit.com/blog/article/2018081501/top.jpg" , style="display: block; width: 80px; margin-left: 150px;" /></a>
   <br>
   <a href="http://haml.info/"><img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="50px;" /></a>
   <a href="https://sass-lang.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" height="45px;" margin-bottom="10px;" /></a>
