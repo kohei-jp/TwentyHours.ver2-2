@@ -2,6 +2,7 @@
 「日々の学習」を、共有・分析するアプリ
 <br>
 
+
 <img style=" width: 80% display: block; text-align: center;" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
 
 
