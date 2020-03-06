@@ -36,12 +36,12 @@
 
 
 ## 使用技術
-- Ruby 2.6.0  
+- Ruby 2.6.2  
 - Rails 5.2.4  
 - Haml/Scss   
 - JQuary  
 - GitHub, Git  
-- Rspec  
+- Rspec  (今後搭載予定)
 - MySQL 5.6  
 - AWS (今後搭載予定)  
   - EC2  
@@ -49,7 +49,6 @@
   - Capstrano  
   - ELB  
   - AMI  
-  - Route53  
 - Nginx, Unicorn  
 
 
