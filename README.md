@@ -68,7 +68,7 @@ http://localhost:3000
 https://github.com/kohei-jp/TwentyHours.ver2-2.git
 
 ## 👀 Author
-https://xkoh.hatenadiary.com/
+https://xkoh.hatenadiary.com/archive/2020
 
 # ER図
 ￼￼<img width="70%" alt="ER図" src="https://user-images.githubusercontent.com/55340851/75799983-3f922a80-5dbc-11ea-885b-a2f554fded03.png">
