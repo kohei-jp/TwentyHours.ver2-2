@@ -7,7 +7,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # 環境ごとに保存先を変更 開発/テスト環境は、file (今だけfog)。 本番はfog(-aws)
   if Rails.env.development? || Rails.env.test? 
-    storage :fog   #本来は、file . アプリ完成次第修正する2020/03/07
+    storage :file   #本来は、file . アプリ完成次第修正する2020/03/07
   else
     storage :fog #fog-aws(外部ストレージ)
   end
