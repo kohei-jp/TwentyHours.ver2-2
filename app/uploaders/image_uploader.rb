@@ -9,7 +9,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   if Rails.env.development? || Rails.env.test? 
     storage :file 
   else
-    storage :fog #fog-aws(外部ストレージ)
+    storage :fog  #fog-aws(外部ストレージ)
   end
 
   # Override the directory where uploaded files will be stored.
