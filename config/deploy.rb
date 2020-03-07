@@ -49,7 +49,7 @@ namespace :deploy do
   end
   before :starting, 'deploy:upload'
   after :finishing, 'deploy:cleanup'
-
+end
 # 環境変数をcapistranoでの自動デプロイで利用
 set :default_env, {
  rbenv_root: "/usr/local/rbenv",
