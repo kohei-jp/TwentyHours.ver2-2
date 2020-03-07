@@ -2,17 +2,15 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
-  # process resize_to_fit: [300, 300]
+  process resize_to_fit: [300, 300]
   # Choose what kind of storage to use for this uploader:
 
   # 環境ごとに保存先を変更 開発/テスト環境は、file (今だけfog)。 本番はfog(-aws)
-  storage :fog
-  # 一旦コメントアウト 2020/3/7
-  # if Rails.env.development? || Rails.env.test? 
-  #   storage :file 
-  # else
-  #   storage :fog #fog-aws(外部ストレージ)
-  # end
+  if Rails.env.development? || Rails.env.test? 
+    storage :file 
+  else
+    storage :fog #fog-aws(外部ストレージ)
+  end
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -34,7 +32,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-  process resize_to_fit: [200, 200]
+  # process resize_to_fit: [200, 200]
   # Create different versions of your uploaded files:
   # version :thumb do
   #   process resize_to_fit: [50, 50]

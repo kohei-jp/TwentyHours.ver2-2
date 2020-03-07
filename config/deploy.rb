@@ -38,30 +38,17 @@ namespace :deploy do
   end
 
   # qiitaを参考に以下全ての行追加(本番環境のみ画像uploadsする分岐) 
-  # desc 'upload master.key'
-  # task :upload do
-  #   on roles(:app) do |host|
-  #     if test "[ ! -d #{shared_path}/config ]"
-  #       execute "mkdir -p #{shared_path}/config"
-  #     end
-  #     upload!('config/master.key', "#{shared_path}/config/master.key")
-  #   end
-  # end
-  # before :starting, 'deploy:upload'
-  # after :finishing, 'deploy:cleanup'
-
-  desc 'upload secrets.yml'
+  desc 'upload master.key'
   task :upload do
     on roles(:app) do |host|
       if test "[ ! -d #{shared_path}/config ]"
         execute "mkdir -p #{shared_path}/config"
       end
-      upload!('config/secrets.yml', "#{shared_path}/config/secrets.yml")
+      upload!('config/master.key', "#{shared_path}/config/master.key")
     end
   end
   before :starting, 'deploy:upload'
   after :finishing, 'deploy:cleanup'
-end
 
 # 環境変数をcapistranoでの自動デプロイで利用
 set :default_env, {
