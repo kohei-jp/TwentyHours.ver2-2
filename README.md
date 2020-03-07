@@ -70,5 +70,13 @@ https://github.com/kohei-jp/TwentyHours.ver2-2.git
 ## 👀 Author
 https://xkoh.hatenadiary.com/archive/2020
 
-# ER図
+## ER図
 ￼￼<img width="70%" alt="ER図" src="https://user-images.githubusercontent.com/55340851/75799983-3f922a80-5dbc-11ea-885b-a2f554fded03.png">
+
+## 機能紹介
+
+### 投稿機能
+<img style=" width: 80% display: block; text-align: center;" alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png">
+
+### マイページ
+<img style=" width: 80% display: block; text-align: center;" alt="マイページ" src="https://user-images.githubusercontent.com/55340851/76150151-995f6100-60ea-11ea-8d0d-1aa593998c9c.png">
