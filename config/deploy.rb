@@ -2,6 +2,11 @@
 # capistranoのバージョンを記載。固定のバージョンを利用し続け、バージョン変更によるトラブルを防止する
 lock '3.12.0'
 
+# qiitaを参考に以下3行追加(あやっていれば、削除する予定)
+#secrets.ymlではリリースバージョン間でシンボリックリンクにして共有
+#credentials.yml.encではmasterkeyにする（今回）
+set :linked_files, %w{config/master.key}
+
 # Capistranoのログの表示に利用する
 set :application, '20Hours'
 
@@ -31,4 +36,25 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
+
+  # qiitaを参考に以下全ての行追加(本番環境のみ画像uploadsする分岐) 
+  desc 'upload master.key'
+  task :upload do
+    on roles(:app) do |host|
+      if test "[ ! -d #{shared_path}/config ]"
+        execute "mkdir -p #{shared_path}/config"
+      end
+      upload!('config/master.key', "#{shared_path}/config/master.key")
+    end
+  end
+  before :starting, 'deploy:upload'
+  after :finishing, 'deploy:cleanup'
 end
+
+# 環境変数をcapistranoでの自動デプロイで利用
+set :default_env, {
+ rbenv_root: "/usr/local/rbenv",
+ path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
+ AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
+ AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
+}

@@ -99,5 +99,6 @@ gem 'groupdate'
 # 画像
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
 # Form Helper
 # gem 'simple_form'
