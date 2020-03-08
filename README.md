@@ -41,14 +41,14 @@
 - Haml/Scss   
 - JQuary  
 - GitHub, Git  
-- Rspec  (今後搭載予定)
+- Rspec
 - MySQL 5.6  
 - AWS (今後搭載予定)  
-  - EC2  
+  - EC2 
+  - Capstrano   
   - S3  
-  - Capstrano  
   - ELB  
-  - AMI  
+  - IAM  
 - Nginx, Unicorn  
 
 
@@ -76,7 +76,14 @@ https://xkoh.hatenadiary.com/archive/2020
 ## 機能紹介
 
 ### 投稿機能
+・タグ投稿機能、プレビュー画像表示、コメント投稿
 <img style=" width: 80% display: block; text-align: center;" alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png">
 
 ### マイページ
+・タグ別達成率表示(円グラフ)、日々の学習時間表示(先グラフ)
+・お気に入りの投稿表示、フォロー/フォロワー表示
 <img style=" width: 80% display: block; text-align: center;" alt="マイページ" src="https://user-images.githubusercontent.com/55340851/76150151-995f6100-60ea-11ea-8d0d-1aa593998c9c.png">
+
+###その他
+####・詳細画面
+コメント投稿機能(ajax通信)
