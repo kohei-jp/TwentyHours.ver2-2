@@ -56,11 +56,11 @@
   <a href="http://haml.info/"><img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="50px;" /></a>
   <a href="https://sass-lang.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" height="45px;" margin-bottom="10px;" /></a>
   <a href="https://jquery.com/"><img src="https://web-camp.io/magazine/wp-content/uploads/2017/03/JQuery_logo-1-1.png" height="50px;" /></a>
-  <a href="https://github.com/capistrano/capistrano"><img src="ttps://user-images.githubusercontent.com/55340851/76168224-fa516c80-61b0-11ea-9cd0-96ae9553e876.png" height="45px"; /></a>
+  <a href="https://github.com/capistrano/capistrano"><img src="ttps://user-images.githubusercontent.com/55340851/76168224-fa516c80-61b0-11ea-9cd0-96ae9553e876.png" height="45px"; width="100px;" /></a>
   <br>
   <a href="https://aws.amazon.com/jp/ec2/"><img src="https://blog.ismg.kdl.co.jp/wp-content/uploads/2017/05/ec2.png" height="60px;" /></a>
-  <a href="https://aws.amazon.com/jp/s3/"><img src="https://user-images.githubusercontent.com/55340851/76168205-d55cf980-61b0-11ea-8f98-b4778577810e.png" height="45px"; /></a>
-  <a href="https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/introduction.html"><img src="https://user-images.githubusercontent.com/55340851/76168199-c9713780-61b0-11ea-8066-bb5ea1321e2f.png" height="45px"; /></a>
+  <a href="https://aws.amazon.com/jp/s3/"><img src="https://user-images.githubusercontent.com/55340851/76168205-d55cf980-61b0-11ea-8f98-b4778577810e.png" height="60px"; /></a>
+  <a href="https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/introduction.html"><img src="https://user-images.githubusercontent.com/55340851/76168199-c9713780-61b0-11ea-8066-bb5ea1321e2f.png" height="60px"; /></a>
 </p>
 
 
@@ -72,6 +72,7 @@ https://github.com/kohei-jp/TwentyHours.ver2-2.git
 
 ## 👀 Author's blog
 https://xkoh.hatenadiary.com/archive/2020
+<br>
 
 ## ER図
 ￼￼<img width="70%" alt="ER図" src="https://user-images.githubusercontent.com/55340851/75799983-3f922a80-5dbc-11ea-885b-a2f554fded03.png">
@@ -79,15 +80,15 @@ https://xkoh.hatenadiary.com/archive/2020
 ## 機能紹介
 
 ### 投稿機能
-・タグ投稿機能、プレビュー画像表示、コメント投稿
-※現在、本番環境でjsが効いておらず、一時的にプレビュー画像が出てきません。
+・タグ投稿機能、プレビュー画像表示、コメント投稿<br>
+※現在、本番環境でjsが効いておらず、一時的にプレビュー画像が出ません。
 <img style=" width: 80% display: block; text-align: center;" alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png">
 
 ### マイページ
-・タグ別達成率表示(円グラフ)、日々の学習時間表示(先グラフ)
+・タグ別達成率表示(円グラフ)、日々の学習時間表示(線グラフ)<br>
 ・お気に入りの投稿表示、フォロー/フォロワー表示
 <img style=" width: 80% display: block; text-align: center;" alt="マイページ" src="https://user-images.githubusercontent.com/55340851/76150151-995f6100-60ea-11ea-8d0d-1aa593998c9c.png">
 
-###その他
-####・詳細画面
+### その他
+#### ・詳細画面
 コメント投稿機能(ajax通信)
