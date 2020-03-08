@@ -40,7 +40,7 @@
 - Rails 5.2.4  
 - Haml/Scss   
 - JQuary  
-- Rspec 
+<!-- - Rspec  -->
 - MySQL 5.6
 - GitHub, Git    
 - Capstrano
@@ -56,7 +56,11 @@
   <a href="http://haml.info/"><img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="50px;" /></a>
   <a href="https://sass-lang.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" height="45px;" margin-bottom="10px;" /></a>
   <a href="https://jquery.com/"><img src="https://web-camp.io/magazine/wp-content/uploads/2017/03/JQuery_logo-1-1.png" height="50px;" /></a>
+  <a href="https://github.com/capistrano/capistrano"><img src="ttps://user-images.githubusercontent.com/55340851/76168224-fa516c80-61b0-11ea-9cd0-96ae9553e876.png" height="45px"; /></a>
+  <br>
   <a href="https://aws.amazon.com/jp/ec2/"><img src="https://blog.ismg.kdl.co.jp/wp-content/uploads/2017/05/ec2.png" height="60px;" /></a>
+  <a href="https://aws.amazon.com/jp/s3/"><img src="https://user-images.githubusercontent.com/55340851/76168205-d55cf980-61b0-11ea-8f98-b4778577810e.png" height="45px"; /></a>
+  <a href="https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/introduction.html"><img src="https://user-images.githubusercontent.com/55340851/76168199-c9713780-61b0-11ea-8066-bb5ea1321e2f.png" height="45px"; /></a>
 </p>
 
 
