@@ -40,15 +40,14 @@
 - Rails 5.2.4  
 - Haml/Scss   
 - JQuary  
-- GitHub, Git  
-- Rspec
-- MySQL 5.6  
-- AWS (今後搭載予定)  
-  - EC2 
-  - Capstrano   
-  - S3  
-  - ELB  
-  - IAM  
+- Rspec 
+- MySQL 5.6
+- GitHub, Git    
+- Capstrano
+- AWS
+  - EC2  Amazon Elastic Compute Cloud 
+  - S3  Amazon Simple Storage Service
+  - ALB  Application Load Balancer
 - Nginx, Unicorn  
 
 
@@ -57,17 +56,17 @@
   <a href="http://haml.info/"><img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="50px;" /></a>
   <a href="https://sass-lang.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" height="45px;" margin-bottom="10px;" /></a>
   <a href="https://jquery.com/"><img src="https://web-camp.io/magazine/wp-content/uploads/2017/03/JQuery_logo-1-1.png" height="50px;" /></a>
-  <!-- <a href="https://aws.amazon.com/jp/ec2/"><img src="https://blog.ismg.kdl.co.jp/wp-content/uploads/2017/05/ec2.png" height="60px;" /></a> -->
+  <a href="https://aws.amazon.com/jp/ec2/"><img src="https://blog.ismg.kdl.co.jp/wp-content/uploads/2017/05/ec2.png" height="60px;" /></a>
 </p>
 
 
 ## 🌐 App URL
-http://localhost:3000
+http://20hours-1582419451.ap-northeast-1.elb.amazonaws.com/
 
 ## 💬 Usage
 https://github.com/kohei-jp/TwentyHours.ver2-2.git
 
-## 👀 Author
+## 👀 Author's blog
 https://xkoh.hatenadiary.com/archive/2020
 
 ## ER図
@@ -77,6 +76,7 @@ https://xkoh.hatenadiary.com/archive/2020
 
 ### 投稿機能
 ・タグ投稿機能、プレビュー画像表示、コメント投稿
+※現在、本番環境でjsが効いておらず、一時的にプレビュー画像が出てきません。
 <img style=" width: 80% display: block; text-align: center;" alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png">
 
 ### マイページ
