@@ -232,13 +232,16 @@ header.header {
 }
 
 .attive{
-  background-color: black;
-  font-size: 14px;
-  height: 200px;
-  overflow: scroll;
-  width: 660px;
-  color: #9ec34b;
-  white-space: nowrap;
+  
+  &--area{
+    background-color: black;
+    font-size: 14px;
+    height: 200px;
+    overflow: scroll;
+    width: 660px;
+    color: #9ec34b;
+    white-space: nowrap;
+  }
 }
 
 /* スクロールの幅の設定 */
@@ -278,6 +281,9 @@ div.contents.row {
       padding-right: 5px;
       font-size: 1.2em;
     }
+  }
+  .container{
+    width: 660px;
   }
   .new_user{
   font-family: "游ゴシック", "YuGothic";
