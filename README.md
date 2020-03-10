@@ -55,8 +55,8 @@
   <a href="http://haml.info/"><img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="50px;" /></a>
   <a href="https://sass-lang.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" height="45px;" margin-bottom="10px;" /></a>
   <a href="https://jquery.com/"><img src="https://web-camp.io/magazine/wp-content/uploads/2017/03/JQuery_logo-1-1.png" height="50px;" /></a>
-  <a href="https://github.com/capistrano/capistrano"><img src="https://user-images.githubusercontent.com/55340851/76217207-553c9f80-6255-11ea-83ad-a637b64b9b11.png" height="45px"; width="100px;" /></a>
   <br>
+  <a href="https://github.com/capistrano/capistrano"><img src="https://user-images.githubusercontent.com/55340851/76217207-553c9f80-6255-11ea-83ad-a637b64b9b11.png" height="45px"; width="100px;" /></a>
   <a href="https://aws.amazon.com/jp/ec2/"><img src="https://blog.ismg.kdl.co.jp/wp-content/uploads/2017/05/ec2.png" height="60px;" /></a>
   <a href="https://aws.amazon.com/jp/s3/"><img src="https://user-images.githubusercontent.com/55340851/76168205-d55cf980-61b0-11ea-8f98-b4778577810e.png" height="60px"; /></a>
   <a href="https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/introduction.html"><img src="https://user-images.githubusercontent.com/55340851/76168199-c9713780-61b0-11ea-8066-bb5ea1321e2f.png" height="60px"; /></a>
@@ -71,7 +71,7 @@ http://20hours-1582419451.ap-northeast-1.elb.amazonaws.com/
 https://github.com/kohei-jp/TwentyHours.ver2-2.git
 - テストユーザ用アカウント(Email / Password)
   - Email: test@gmail.com
-  - Password: aaaa1111
+  - Password: aaaa1111  
 ※ ヘッダーの「ログインボタン」よりログイン出来ます。
 
 ## 👀 Author's blog
@@ -86,7 +86,7 @@ https://xkoh.hatenadiary.com/archive/2020
 ### 投稿機能
 ・タグ投稿機能、プレビュー画像表示、コメント投稿<br>
 ※現在、本番環境でjsが効いておらず、一時的にプレビュー画像が出ません。
-<img style=" width: 80% display: block; text-align: center;" alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png">
+<img style=" width: 75% display: block; text-align: center;" alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png">
 
 ### マイページ
 ・タグ別達成率表示(円グラフ)、日々の学習時間表示(線グラフ)<br>
