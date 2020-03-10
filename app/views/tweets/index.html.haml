@@ -6,7 +6,6 @@
     = form.submit "検索", class: "search-btn"
 .contents.row
   - @tweets.each do |tweet| 
-    -# = render partial: "tweet", locals: { tweet: tweet}
     .content_post.wow.bounce{:style => "background-image: url(#{tweet.image});"}
       .tag_index
         = tweet.tag.tag_name
@@ -17,7 +16,7 @@
             = link_to '詳細', "/tweets/#{tweet.id}", method: :get
           - if user_signed_in? && current_user.id == tweet.user_id
             %li
-              = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
+              -# = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get 一旦削除(ここもプレビュー表示をしないといけない)
             %li 
               = link_to '削除', "/tweets/#{tweet.id}", method: :delete
       .name 
@@ -47,7 +46,7 @@
         %a{:href => "/users/#{tweet.user.id}"}
           = tweet.user.name
       .text
-        = tweet.text
+        = tweet.text.truncate(8)
         %br
         = "today:#{tweet.time}h"
 

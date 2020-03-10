@@ -1,5 +1,5 @@
 # Twenty Hours
-「日々の学習」を、共有・分析するアプリ
+「日々の学習」を、共有・記録するアプリケーション
 <br>
 
 
@@ -25,7 +25,7 @@
 ## 機能一覧
 ・ユーザ登録、ログイン機能  
 ・ユーザー間でのフォロー、フォロワー機能  
-・ツイート投稿機能(画像プレビュー表示)
+・ツイート投稿機能(画像プレビュー表示)  
 ・ツイート検索機能(インクリメンタルサーチ)  
 ・ツイートタグ付け機能  
 ・ツイートへのコメント(ajax)  
@@ -40,7 +40,6 @@
 - Rails 5.2.4  
 - Haml/Scss   
 - JQuary  
-<!-- - Rspec  -->
 - MySQL 5.6
 - GitHub, Git    
 - Capstrano
@@ -49,14 +48,14 @@
   - S3  Amazon Simple Storage Service
   - ALB  Application Load Balancer
 - Nginx, Unicorn  
-
+<!-- - Rspec  -->
 
 <p text-align: center>
   <a href="https://rubyonrails.org/"><img src="https://meltingrabbit.com/blog/article/2018081501/top.jpg" height="45px"; /></a>
   <a href="http://haml.info/"><img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="50px;" /></a>
   <a href="https://sass-lang.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" height="45px;" margin-bottom="10px;" /></a>
   <a href="https://jquery.com/"><img src="https://web-camp.io/magazine/wp-content/uploads/2017/03/JQuery_logo-1-1.png" height="50px;" /></a>
-  <a href="https://github.com/capistrano/capistrano"><img src="ttps://user-images.githubusercontent.com/55340851/76168224-fa516c80-61b0-11ea-9cd0-96ae9553e876.png" height="45px"; width="100px;" /></a>
+  <a href="https://github.com/capistrano/capistrano"><img src="https://user-images.githubusercontent.com/55340851/76217207-553c9f80-6255-11ea-83ad-a637b64b9b11.png" height="45px"; width="100px;" /></a>
   <br>
   <a href="https://aws.amazon.com/jp/ec2/"><img src="https://blog.ismg.kdl.co.jp/wp-content/uploads/2017/05/ec2.png" height="60px;" /></a>
   <a href="https://aws.amazon.com/jp/s3/"><img src="https://user-images.githubusercontent.com/55340851/76168205-d55cf980-61b0-11ea-8f98-b4778577810e.png" height="60px"; /></a>
@@ -67,8 +66,13 @@
 ## 🌐 App URL
 http://20hours-1582419451.ap-northeast-1.elb.amazonaws.com/
 
+
 ## 💬 Usage
 https://github.com/kohei-jp/TwentyHours.ver2-2.git
+- テストユーザ用アカウント(Email / Password)
+  - Email: test@gmail.com
+  - Password: aaaa1111
+※ ヘッダーの「ログインボタン」よりログイン出来ます。
 
 ## 👀 Author's blog
 https://xkoh.hatenadiary.com/archive/2020
@@ -87,8 +91,16 @@ https://xkoh.hatenadiary.com/archive/2020
 ### マイページ
 ・タグ別達成率表示(円グラフ)、日々の学習時間表示(線グラフ)<br>
 ・お気に入りの投稿表示、フォロー/フォロワー表示
-<img style=" width: 80% display: block; text-align: center;" alt="マイページ" src="https://user-images.githubusercontent.com/55340851/76150151-995f6100-60ea-11ea-8d0d-1aa593998c9c.png">
+<img style=" width: 85% display: block; text-align: center;" alt="マイページ" src="https://user-images.githubusercontent.com/55340851/76150151-995f6100-60ea-11ea-8d0d-1aa593998c9c.png">
 
 ### その他
 #### ・詳細画面
 コメント投稿機能(ajax通信)
+
+## 今後実装したい技術
+・現在、まだシンプルな機能しか実装出来ておらず、スキル習得した際の  
+  アニメーションの演出など、UIをリッチにしていきたい。
+・コードを美しく書く
+・Rspecの導入
+・Docker
+・CircleCI
