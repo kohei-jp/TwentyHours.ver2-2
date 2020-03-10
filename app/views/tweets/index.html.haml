@@ -52,17 +52,16 @@
 
   .attive
     %h1.title 
-    <みんなのスキル習得状況> 
+      <みんなのスキル習得状況> 
     .attive--area
       - @times.each do |array, hour|
         - name = array[0]
         - subject = array[1]
         - if 20 - hour > 0
           ・"#{name}さんは "#{subject}" を合計#{hour}時間勉強しました。残り"#{ 20 - hour}時間"で取得です！"
+          %br
         - else 
-          ・"#{name}さんは "#{subject}" を合計#{hour}時間勉強しました。20時間達成です！"
-
-        %br
+          .attive--area__success・"#{name}さん! "#{subject}" 20時間達成です！おめでとうございます"
 
 
 .contents.row.initial

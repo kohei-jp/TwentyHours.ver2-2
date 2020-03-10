@@ -1,5 +1,4 @@
 @import "compass";
-// @import url("tops.scss");
 
 $accent: #57C3E9;
 $dark: #666;
@@ -232,7 +231,6 @@ header.header {
 }
 
 .attive{
-  
   &--area{
     background-color: black;
     font-size: 14px;
@@ -241,6 +239,10 @@ header.header {
     width: 660px;
     color: #9ec34b;
     white-space: nowrap;
+    &__success{
+      color: red;
+      font-weight: bold;
+    }
   }
 }
 
@@ -274,7 +276,6 @@ div.contents.row {
     right: 0;
   }
   h2 {
-    // @include boxBase(20px 0, 0);
     font-weight: normal;
     strong {
       font-weight: bold;
@@ -380,8 +381,6 @@ div.contents.row {
     p {
       position: absolute;
       left: 30px;
-      // right: 100px;
-      // bottom: 30px;
       margin: 0;
       font-size: 20px;
       z-index: 2;
@@ -412,7 +411,6 @@ div.contents.row {
     }
   }
   .success {
-    // @include boxBase(20px 0 ,30px);
     text-align: center;
     margin: 50px auto;
     padding: 120px;
@@ -432,7 +430,6 @@ div.contents.row {
   flex-wrap:initial;
 }
 .user_page {
-  // margin: 20px auto;
   display: inline-block;
   color: white;
   font-family: "ほのか明朝";
@@ -450,7 +447,6 @@ div.contents_show.row {
   background-color: lightgray;
   margin-top: 50px;
   h2 {
-    // @include boxBase(20px 0, 0);
     font-weight: normal;
     strong {
       font-weight: bold;
@@ -536,8 +532,6 @@ div.contents_show.row {
     p {
       position: absolute;
       left: 30px;
-      // right: 100px;
-      // bottom: 30px;
       margin: 0;
       font-size: 20px;
       z-index: 2;
@@ -571,7 +565,6 @@ div.contents_show.row {
     }
   }
   .success {
-    // @include boxBase(20px 0 ,30px);
     text-align: center;
     margin: 50px auto;
     padding: 120px;
@@ -600,7 +593,6 @@ div.contents_show.row {
   flex-direction: column;
   align-items: center;
   %p.user_page {
-    // margin: 20px auto;
     display: inline-block;
     color: white;
     font-family: "ほのか明朝";
@@ -610,13 +602,8 @@ div.contents_show.row {
     text-align: center;
     padding-top: 32px;
     .search-input {
-      // width: 30%;
       margin-right: 10px;
     }
-  
-  //   .search-btn {
-  //     width: 10%;
-  //   }
   }
 }
 
@@ -663,7 +650,6 @@ form {
     font-family: "游ゴシック", "YuGothic";
   }
   input[type="submit"] {
-    // @extend .transition;
     background-color: $accent;
     border-radius: 20px;
     color: #fff;
@@ -828,56 +814,3 @@ footer {
   }
 }
 
-
-//円グラフ
-@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
-@keyframes load{0%{stroke-dashoffset:0}}
-.progress {
-    position: relative;
-    display: inline-block;
-    padding: 0;
-    text-align: center;
-    &>li {
-        display: inline-block;
-        position: relative;
-        text-align: center;
-        color: white;
-        font-family: Lato;
-        font-weight:100;
-        margin: 2rem;
-        &:before {
-            content: attr(data-name);
-            position: absolute;
-            width: 100%;
-            bottom: -2rem;
-            font-weight:400;
-        }
-        &:after {
-            content: attr(data-percent);
-            position: absolute;
-            width: 100%;
-            top: 3.7rem;
-            left: 0;
-            font-size: 2rem;
-            text-align: center;
-        }
-    }
-    svg {
-        width: 10rem;
-        height: 10rem;
-        &:nth-child(2) {
-            position: absolute;
-            left: 0;
-            top: 0;
-            transform: rotate(-90deg);
-        }
-        &:nth-child(2) path {
-            fill: none;
-            stroke-width: 25;
-            stroke-dasharray: 629;
-            stroke: $dark;
-            opacity:.9;
-            animation: load 3s;
-        }
-    }
-}
