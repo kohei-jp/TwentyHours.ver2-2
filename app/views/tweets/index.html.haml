@@ -57,7 +57,11 @@
       - @times.each do |array, hour|
         - name = array[0]
         - subject = array[1]
-        ・"#{name}さんは "#{subject}" を合計#{hour}時間勉強しました。残り"#{ 20 - hour}時間"で取得です！"
+        - if 20 - hour > 0
+          ・"#{name}さんは "#{subject}" を合計#{hour}時間勉強しました。残り"#{ 20 - hour}時間"で取得です！"
+        - else 
+          ・"#{name}さんは "#{subject}" を合計#{hour}時間勉強しました。20時間達成です！"
+
         %br
 
 
