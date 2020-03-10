@@ -16,7 +16,7 @@
             = link_to '詳細', "/tweets/#{tweet.id}", method: :get
           - if user_signed_in? && current_user.id == tweet.user_id
             %li
-              -# = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get 一旦削除(ここもプレビュー表示をしないといけない)
+              -# = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get 一旦削除(ここもedit.hamlにプレビュー表示をしないといけない)
             %li 
               = link_to '削除', "/tweets/#{tweet.id}", method: :delete
       .name 
@@ -40,7 +40,7 @@
               = link_to "フォローする", user_relationships_path(tweet.user.id), method: :post
         - else
           .fav
-            %span お気に入り数:
+            %span いいね登録:
             = tweet.favorites.count
 
         %a{:href => "/users/#{tweet.user.id}"}
@@ -51,7 +51,8 @@
         = "today:#{tweet.time}h"
 
   .attive
-    %h1.title <みんなのスキル習得状況> 
+    %h1.title 
+    <みんなのスキル習得状況> 
     .attive--area
       - @times.each do |array, hour|
         - name = array[0]
