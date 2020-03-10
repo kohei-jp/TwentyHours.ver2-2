@@ -41,7 +41,7 @@
               = link_to "フォローする", user_relationships_path(tweet.user.id), method: :post
         - else
           .fav
-            %span いいね登録:
+            %i.fas.fa-heart.like-btn : 
             = tweet.favorites.count
 
         %a{:href => "/users/#{tweet.user.id}"}
