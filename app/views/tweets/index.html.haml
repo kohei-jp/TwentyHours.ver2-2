@@ -24,12 +24,13 @@
           - if tweet.favorited_by?(current_user)
             / ログインしているユーザーがファボしたかどうかで分岐
             .fav
-              %span いいね解除:
+              %i.fas.fa-heart.like-btn : 
               = link_to tweet.favorites.count, tweet_favorites_path(tweet.id), method: :delete
           - else
             .fav
-              %span いいね登録:
+              %i.fas.fa-heart.unlike-btn :
               = link_to tweet.favorites.count, tweet_favorites_path(tweet.id), method: :post
+
 
           - if current_user != tweet.user
             -if tweet.user.followed_by?(current_user)

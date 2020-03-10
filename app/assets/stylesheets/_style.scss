@@ -756,6 +756,7 @@ footer {
     &:hover ul.more_list {
       display: block;
     }
+
     ul.more_list {
       position: absolute;
       text-align: left;
@@ -782,6 +783,21 @@ footer {
         }
       }
     }
+    .like-btn {
+      width: 25px;
+      height: 30px;
+      font-size: 25px;
+      color: #808080; 
+      margin-left: 20px;
+      }
+     
+     .unlike-btn {
+      width: 25px;
+      height: 30px;
+      font-size: 25px;
+      color: #e54747;
+      margin-left: 20px;
+      }
   }
 
 

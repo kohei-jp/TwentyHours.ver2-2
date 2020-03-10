@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title TwentyHOURS
+    %title 20Hours
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag "//www.google.com/jsapi", "chartkick" => true
@@ -35,7 +35,7 @@
                 %li 
                   = link_to "マイページ", "/users/#{current_user.id}"
                   = link_to "ログアウト", destroy_user_session_path, method: :delete
-            = link_to  "Commit", "/tweets/new", class: "post"
+            = link_to  "投稿する", "/tweets/new", class: "post"
         - else
           .grid-6
             = link_to "ログイン", new_user_session_path, class: 'post'

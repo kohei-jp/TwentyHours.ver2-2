@@ -33,12 +33,12 @@
 
     - else
       .fav
-        %span いいね登録:
+        %span お気に入り数:
         = tweet.favorites.count
 
     %a{:href => "/users/#{tweet.user.id}"}
       = tweet.user.name
   .text
-    = tweet.text
+    = tweet.text.truncate(5)
     %br
     = "today:#{tweet.time}h"
