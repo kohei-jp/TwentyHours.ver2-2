@@ -1,12 +1,12 @@
 .search-bar
   %p.user_page
-    = "Everybady commit"
+    = "Everyone commit"
   = form_with(url: tweets_searches_path, local: true, method: :get, class: "search-form") do |form|
     = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
     = form.submit "検索", class: "search-btn"
 .contents.row
   - @tweets.each do |tweet| 
-    .content_post.wow.bounce{:style => "background-image: url(#{tweet.image});"}
+    .content_post{:animation => "bounceIn", :style => "background-image: url(#{tweet.image});"}
       .tag_index
         = tweet.tag.tag_name
       .more
@@ -49,7 +49,7 @@
       .text
         = tweet.text.truncate(8)
         %br
-        = "today:#{tweet.time}h"
+        = "today:#{tweet.time.to_f}h"
 
   .attive
     %h1.title 

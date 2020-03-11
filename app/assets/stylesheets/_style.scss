@@ -21,6 +21,16 @@ $white: white;
   margin: $margin;
 }
 
+@mixin fav_a {
+  display: block;
+  font-size: 9px;
+  color: $white;
+  text-decoration: none;
+  &:hover {
+    color: $dark;
+  }
+}
+
 body {
   height: 100%;
   background-color: $dark;
@@ -398,13 +408,14 @@ div.contents.row {
       font-size: 13px;
 
       a {
-        display: block;
-        font-size: 9px;
-        color: $white;
-        text-decoration: none;
-        &:hover {
-          color: $dark;
-        }
+        @include fav_a;
+        // display: block;
+        // font-size: 9px;
+        // color: $white;
+        // text-decoration: none;
+        // &:hover {
+        //   color: $dark;
+        // }
       }
       span {
         font-size: 9px;
@@ -500,6 +511,9 @@ div.contents_show.row {
       text-align: right;
       &:hover ul.more_list_show {
         display: block;
+      }
+      &__fav {
+        @include fav_a;
       }
       ul.more_list_show {
         position: absolute;
