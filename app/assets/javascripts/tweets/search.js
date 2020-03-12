@@ -13,7 +13,11 @@ $(function() {
       var current_user = ""
     }
 
-    var html = `<div class="content_post wow bounce" style="background-image: url(${tweet.image});">
+    var html = `<div animation="bounceIn" class="content_post bounceIn" style="background-image:  url(${tweet.image});">
+                  <div class="tag_index">
+                    ${ tweet.tag_name }
+                  </div>
+
                   <div class="more">
                     <span><img src="/assets/arrow_top.png"></span>
                     <ul class="more_list">
@@ -23,17 +27,25 @@ $(function() {
                       ${current_user}
                     </ul>
                   </div>
-                <span class="name">
-                <a href="/users/${tweet.user_id}">
-                    ${ tweet.name }
-                  </a>
-                </span>
-                <div class="text">
-                  ${ tweet.text }<br>
-                  today:${tweet.time}h 
-                  <br>
-                  残り: xxxh
-                </div>
+
+                  <div class="name">
+
+                    <a class="fav" rel="nofollow" data-method="post" href="/tweets/1/favorites">
+                      <i class="fas fa-heart like-btn"></i>
+                      ${tweet.fav_count}
+                    </a>
+
+                    <a rel="nofollow" data-method="post" href="/users/1/relationships">フォローする</a>
+
+                    <a href="/users/${tweet.user_id}">
+                      ${ tweet.name }
+                    </a>
+                  </div>
+
+                  <div class="text">
+                    ${ tweet.text }<br>
+                    today:${tweet.time}h 
+                  </div>
                 </div>`
     search_list.append(html);
   }
@@ -45,6 +57,7 @@ $(function() {
 
   $(".search-input").on("keyup", function() {
     var input = $(".search-input").val();
+    // console.log(input);
     $.ajax({
       type: "GET",
       url: "/tweets/searches",
@@ -53,12 +66,13 @@ $(function() {
     })
     .done(function(tweets){
       $(".contents.row").empty();
-      if(tweets.length !== 0) {
+      if(tweets.length !== 0) {            //tweetsにデータがあれば
         tweets.forEach(function(tweet){
+          console.log(tweet);
           appendTweet(tweet);
         });
       }
-      else{
+      else {
         appendErrMsgToHTML("一致するツイートがありません");
       }
     })

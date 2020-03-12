@@ -1,4 +1,4 @@
-.content_post.wow.bounce{:style => "background-image: url(#{tweet.image});"}
+.content_post{:animation => "bounceIn", :style => "background-image: url(#{tweet.image});"}
   .tag_index
     = tweet.tag.tag_name
   .more
@@ -8,37 +8,35 @@
         = link_to '詳細', "/tweets/#{tweet.id}", method: :get
       - if user_signed_in? && current_user.id == tweet.user_id
         %li
-          = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
+          -# = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get 一旦削除(ここもedit.hamlにプレビュー表示をしないといけない)
         %li 
           = link_to '削除', "/tweets/#{tweet.id}", method: :delete
-  %span.name 
+  .name 
     - if user_signed_in?
       - if tweet.favorited_by?(current_user)
-        / ログインしているユーザーがファボしたかどうかで分岐
-        .fav
-          %span いいね解除:
-          = link_to tweet.favorites.count, tweet_favorites_path(tweet.id), method: :delete
+        -# ログインしているユーザーがファボしたかどうかで分岐
+        = link_to tweet_favorites_path(tweet.id), method: :delete, class: "fav" do
+          %i.fas.fa-heart.unlike-btn
+          = tweet.favorites.count
       - else
-        .fav
-          %span いいね登録:
-          = link_to tweet.favorites.count, tweet_favorites_path(tweet.id), method: :post
+        = link_to tweet_favorites_path(tweet.id), method: :post, class: "fav" do
+          %i.fas.fa-heart.like-btn
+          = tweet.favorites.count
+
 
       - if current_user != tweet.user
         -if tweet.user.followed_by?(current_user)
-          %p 
           = link_to "フォロー済み", user_relationships_path(tweet.user.id), method: :delete
         - else
-          %p
           = link_to "フォローする", user_relationships_path(tweet.user.id), method: :post
-
     - else
       .fav
-        %span お気に入り数:
+        %i.fas.fa-heart.like-btn : 
         = tweet.favorites.count
 
     %a{:href => "/users/#{tweet.user.id}"}
       = tweet.user.name
   .text
-    = tweet.text.truncate(5)
+    = tweet.text.truncate(8)
     %br
-    = "today:#{tweet.time}h"
+    = "today:#{tweet.time.to_f}h"
