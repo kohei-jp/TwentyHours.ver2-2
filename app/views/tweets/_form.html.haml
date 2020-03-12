@@ -1,22 +1,16 @@
-
 = form.number_field :time, placeholder: "time", step: "0.1"
 = form.fields_for :tag do |tag_form|
   = tag_form.text_field :tag_name, placeholder: "tag"
--# = form.text_field :image, placeholder: "Image Url"
 .field.image
   = form.label 'サムネイル（スクリーンショットなど）', style: "font-size: 14px; color: gray;"
   // id "file"で、fileとdivを紐付けクリック時に連動
   #img_field{:onclick => "$('#file').click()"}
     // 画像があるときは画像を表示する
     - if @tweet.image.present?
-      = image_tag(@tweet.image)
+      = image_tag(@tweet.image.to_s)
     - else
       %i.fas.fa-image
       %i.fas.fa-file-upload.add
   = form.file_field :image, class: "image", style: "display:none;", id: "file"
-
 = form.text_area :text, placeholder: "comment", rows: "10"
--# = f.form.text_field :tag, placeholder: "tag"
 = form.submit "SEND"
-
--# textでスペースが開くとrollbackする

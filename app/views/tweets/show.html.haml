@@ -3,11 +3,11 @@
     %span.tag 
       = @tag.tag_name
     .more_show
-      %span= image_tag 'arrow_top.png'
+      %span= image_tag '/arrow_top.png'
       - if user_signed_in? && current_user.id == @tweet.user_id
         %ul.more_list_show
           %li
-            -# = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
+            = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
           %li 
             = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
     %span.name_show 
