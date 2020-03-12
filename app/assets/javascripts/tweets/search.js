@@ -19,7 +19,7 @@ $(function() {
                   </div>
 
                   <div class="more">
-                    <span><img src="/assets/arrow_top.png"></span>
+                    <span><img src="/arrow_top.png"></span>
                     <ul class="more_list">
                       <li>
                         <a href="/tweets/${tweet.id}" data-method="get" >詳細</a>
