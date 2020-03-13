@@ -1,17 +1,21 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook]
+         :recoverable, :rememberable, :validatable
+
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,30}+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  validates :password,    presence: true, format: { with: VALID_PASSWORD_REGEX , message: 'は6文字以上の英字と数字両方を含むパスワードを設定してください'}
+  validates :email,       presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
+  validates :name,        presence: true, length: {maximum: 6}
+
   has_many :tweets
   has_many :comments
   has_many :tags, through: :tweets
   has_many :favorites
   has_many :favorite_tweets, through: :favorites, source: :tweet
-  has_many :sns_credentials
-
-  validates :name, presence: true, length: { maximum: 6 }
-
-#   8行目は本来、"has_many :tweets, through: :favorites"と記述したいが、4行目と重複するため、favorite_tweetsに名称を変更している。
-#   →勝手に変えていいのか。  optionで参照元のモデルを "source: :tweet"としているからOK。 
+# "has_many :tweets, through: :favorites"の所、他と重複するため、favorite_tweetsに名称を変更している。
+#  opで参照元のモデルを "source: :tweet"としているからOK。 
 
  # ====================自分がフォローしているユーザーとの関連 ===================================
   #フォローする側のUserから見て、フォローされる側のUserを(中間テーブルを介して)集める。なので親はfollowing_id(フォローする側)

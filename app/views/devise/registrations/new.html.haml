@@ -7,18 +7,18 @@
         .field
           = f.label :name
           %br/
-          = f.text_field :name, autofocus: true
+          = f.text_field :name, autofocus: true, placeholder: "6文字以下"
         .field
           = f.label :email
           %br/
-          = f.email_field :email
+          = f.email_field :email, placeholder: "PC・スマホどちらでも可"
         .field
           = f.label :password
           - if @validatable
             %em
               (#{@minimum_password_length} characters minimum)
           %br/
-          = f.password_field :password, autocomplete: "off"
+          = f.password_field :password, autocomplete: "off", placeholder:"英字と数字両方を含む6文字以上のパスワード"
         .field
           = f.label :password_confirmation
           %br/
