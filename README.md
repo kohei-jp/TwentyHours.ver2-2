@@ -100,7 +100,8 @@ https://xkoh.hatenadiary.com/archive/2020
 ## 今後実装したい技術
 ・現在、シンプルな見た目になっており、スキル習得した際の  
   アニメーションの演出など、UIをリッチにしていきたい。  
+・チャット機能の実装
 ・コードを美しく書く  
 ・Rspecの導入  
-・Docker  
-・CircleCI  
+・Dockerの導入  
+・CircleCIの導入  
