@@ -1,11 +1,14 @@
 class Tweet < ApplicationRecord
   validates:time, presence: true
-  validates:text, length: { maximum: 10 }
-  belongs_to :user
+  validates:text, length: { maximum: 16 }
+  validates:tag, presence: true
+  validates:user, presence: true
+
   has_many :comments
+  has_many :favorites
+  belongs_to :user
   belongs_to :tag
   accepts_nested_attributes_for :tag
-  has_many :favorites
 
   mount_uploader :image, ImageUploader
 

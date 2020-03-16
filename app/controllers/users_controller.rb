@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @tags = @user.tags 
     @name = @user.name
     @tweets = current_user.tweets.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
+    # @tweets = @user.tweets.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
     @times = Tweet.group('user_id, tag_id').sum(:time) #fav用
     @mytimes = @user.tweets.group_by_day(:created_at).sum(:time).to_a
 
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
 
   end
 
-  # 円グラフのやつ??
+  # 円グラフ
   def calc_total
     tweets.joins(:tags)
       .group(Tweets.arel_table[:id]).select('project_users.*, sum(work_time) as sum_work_times, sum(extra_cost) as sum_extra_costs')
