@@ -12,5 +12,5 @@
       %i.fas.fa-image
       %i.fas.fa-file-upload.add
   = form.file_field :image, class: "image", style: "display:none;", id: "file"
-= form.text_area :text, placeholder: "comment", rows: "10"
+= form.text_area :text, placeholder: "comment", rows: "10", id: "text"
 = form.submit "SEND"

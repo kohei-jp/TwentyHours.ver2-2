@@ -3,7 +3,7 @@ describe User do
   describe '#create' do
 
     # 1. nameとemail、passwordとpassword_confirmationが存在すれば登録できること
-    it "is valid with a nickname, email, password, password_confirmation" do
+    it "is valid with a name, email, password, password_confirmation" do
       user = build(:user)
       expect(user).to be_valid
     end
