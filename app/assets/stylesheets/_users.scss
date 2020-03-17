@@ -127,3 +127,20 @@
         }
     }
 }
+
+
+.graph{
+  position: relative;
+  .y-high{
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    font-size: 14px;
+  }
+  .y-low{
+    position: absolute;
+    top: 220px;
+    left: 40px;
+    font-size: 14px;
+  }
+}

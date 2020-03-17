@@ -36,9 +36,10 @@
                   %path{:d => "M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z", "stroke-dashoffset" => "629"}
         / Defining Angle Gradient Colors
         = render 'colors'
-    
-        <Totalコミット時間>
-        = line_chart @mytimes, min: 0, max: 20, width: "600px", height: "300px", colors: ["white", "#fff"], xtitle: "Day", ytitle: "commit[hours]"
+        .graph
+          = line_chart @mytimes, min: 0, max: 20, width: "600px", height: "300px", colors: ["white", "#fff"], xtitle: "Day", ytitle: "commit[h]", messages: {empty: "No data"}
+          .y-high 20
+          .y-low 0
 
       -# お気に入り
       #second_tab01.cp_tabpanel

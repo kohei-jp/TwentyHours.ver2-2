@@ -9,16 +9,73 @@ class UsersController < ApplicationController
     @tags = @user.tags 
     @name = @user.name
     @tweets = current_user.tweets.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
-    # @tweets = @user.tweets.includes(:user, :tag).order("created_at DESC").page(params[:page]).per(9)
-    @times = Tweet.group('user_id, tag_id').sum(:time) #fav用
-    @mytimes = @user.tweets.group_by_day(:created_at).sum(:time).to_a
-
-    # @pietimes = @tags.includes(:tweets).group_by(:tag_name).sum(:time) 上手くいかない
     @pietimes = @user.tweets.includes(:tag).group('tag_name').sum(:time).to_a
-
+    
+    @times = Tweet.group('user_id, tag_id').sum(:time) #fav用
     tweets = @user.tweets #fav用
     @favorite_tweets = @user.favorite_tweets #fav用
     # favorite_tweetsとは、user.rbで定義した、favしたtweetsテーブルのこと
+
+    @mytimes = @user.tweets.group_by_day(:created_at).sum(:time).to_a
+    @mytimes_date = @mytimes.transpose[0].to_s
+    @mytimes_hour = @mytimes.transpose[1]
+    # binding.pry
+    # @graph = LazyHighCharts::HighChart.new('graph') do |f|
+    #   f.title(text: "Total学習時間[h]")
+    #   f.xAxis(name: "時間", categories: @mytimes_date)
+    #   f.series(name: "学習時間[h]", data: @mytimes_hour)
+    #   f.chart(
+    #     backgroundColor: {
+    #       linearGradient: [0, 0, 500, 500],
+    #       stops: [
+    #         [0, "gray"],
+    #         [1, "gray"],
+    #       ]
+    #     },
+    #     plotBackgroundColor: "gray",
+    #     plotShadow: true,
+    #     plotBorderWidth: 1
+    #   )
+    #   f.colors(["white"])
+    # end
+
+    # 修正版
+    # @chart = LazyHighCharts::HighChart.new('graph') do |f|
+    #   f.title(text: "Total学習時間[h]")
+    #   f.xAxis(name: "時間", categories: @mytimes_date)
+    #   f.series(name: "学習時間[h]", data: @mytimes_hour)
+    
+    #   f.legend(align: 'right', verticalAlign: 'top', y: 20, layout: 'vertical')
+    #   f.chart({defaultSeriesType: "column"})
+    # end
+    
+    # @chart_globals = LazyHighCharts::HighChartGlobals.new do |f|
+    #   # f.global(useUTC: false)
+    #   f.chart(
+    #     backgroundColor: {
+    #       linearGradient: [0, 0, 500, 500],
+    #       stops: [
+    #         [0, "gray"],
+    #         [1, "gray"]
+    #       ]
+    #     },
+    #     borderWidth: 2,
+    #     plotBackgroundColor: "gray",
+    #     plotShadow: true,
+    #     plotBorderWidth: 1
+    #   )
+    #   f.lang(thousandsSep: ",")
+    #   f.colors(["white"])
+    # end
+
+    # @chart = LazyHighCharts::HighChart.new('graph') do |f|
+    #   f.options[:lang] = { noData: "My beautiful noData message" }
+    #   f.title(text: nil)
+    #   f.series([])
+    # end
+
+
+
 
     # user = User.find(params[:id]) #follow用
     @fallow_users = @user.followings #follow用

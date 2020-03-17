@@ -1,5 +1,6 @@
-.tag_index
-  = tweet.tag.tag_name
+.tag-form
+  .tag_index
+    = tweet.tag.tag_name.truncate(7)
 .more
   %span= image_tag('/arrow_top.png')
   %ul.more_list

@@ -1,33 +1,11 @@
 .contents_show.row
-  .content_post_show.wow.bounce{:style => "background-image: url(#{@tweet.image});"}
-    %span.tag 
-      = @tag.tag_name
-    .more_show
-      %span= image_tag '/arrow_top.png'
-      - if user_signed_in? && current_user.id == @tweet.user_id
-        %ul.more_list_show
-          %li
-            = link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get
-          %li 
-            = link_to '削除', "/tweets/#{@tweet.id}", method: :delete
-    %span.name_show 
-      .more_show__fav 
-        - if user_signed_in?
-          - if @tweet.favorited_by?(current_user)
-            -# ログインしているユーザーがファボしたかどうかで分岐
-            = link_to tweet_favorites_path(@tweet.id), method: :delete, class: "fav" do
-              %i.fas.fa-heart.unlike-btn
-              = @tweet.favorites.count
-          - else
-            = link_to tweet_favorites_path(@tweet.id), method: :post, class: "fav" do
-              %i.fas.fa-heart.like-btn
-              = @tweet.favorites.count
-      %a{:href => "/users/#{@tweet.user.id}"}
-        = @tweet.user.name
-    .text_show
-      = @tweet.text
-      %br
-      = "today:#{@tweet.time}h"
+  - if @tweet.image.present?
+    .content_post_show.wow.bounce{:style => "background-image: url(#{@tweet.image});"}
+      = render 'show'
+  - else
+    .content_post_show.wow.bounce{:style => "background-image: url(/coffee.jpg);"}
+      = render 'show'
+
   .container
     - if current_user
       = form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form|
