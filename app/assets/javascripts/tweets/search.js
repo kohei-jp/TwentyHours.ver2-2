@@ -14,7 +14,7 @@ $(function() {
     }
 
     var html = `<div animation="bounceIn" class="content_post bounceIn" style="background-image:  url(${tweet.image});">
-                  <div class="tag_index">
+                  <div class="tag_index index">
                     ${ tweet.tag_name }
                   </div>
 
@@ -29,7 +29,6 @@ $(function() {
                   </div>
 
                   <div class="name">
-
                     <a class="fav" rel="nofollow" data-method="post" href="/tweets/1/favorites">
                       <i class="fas fa-heart like-btn"></i>
                       ${tweet.fav_count}
@@ -68,7 +67,7 @@ $(function() {
       $(".contents.row").empty();
       if(tweets.length !== 0) {            //tweetsにデータがあれば
         tweets.forEach(function(tweet){
-          console.log(tweet);
+          // console.log(tweet);
           appendTweet(tweet);
         });
       }

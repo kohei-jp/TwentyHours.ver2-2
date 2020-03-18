@@ -340,7 +340,6 @@ div.contents.row {
   .content_post {
     width: calc(100% / 3.4);/*3等分*/
     margin: 10px;
-    // padding: 12px;
     padding: 12px 70px 10px 13px;
     position: relative;
     height: 200px;
@@ -449,6 +448,9 @@ div.contents.row {
       }
     }
   }
+  .image{
+    background-image: url(coffee.jpg);
+  }
   .success {
     text-align: center;
     margin: 50px auto;
@@ -463,6 +465,10 @@ div.contents.row {
     }
   }
 } //div.content row用
+
+.paginate{
+  text-align: center;
+}
 
 .initial {
   display: initial;
