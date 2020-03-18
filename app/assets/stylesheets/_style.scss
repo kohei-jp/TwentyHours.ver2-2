@@ -280,13 +280,10 @@ header.header {
 .tag_index {
   color: #fff;
   font-family: 'Raleway', sans-serif;
-  font-size: 12px;
-}
-.tag_index {
   background: #F58E7E;
   display: inline-block;
   height: 30px;
-  width: 110px;
+  width: 115px;
   line-height: 30px;
   margin: 0 10px 5px 5px;
   padding: 0 10px;
@@ -294,6 +291,10 @@ header.header {
 }
 .show{
   width: initial;
+  font-size: 16px;
+}
+.index{
+  font-size: 11px;
 }
 
 .tag_index:before {
