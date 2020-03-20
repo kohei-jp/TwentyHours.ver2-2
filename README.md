@@ -4,6 +4,7 @@
 
 <p text-align: center>
   <img src="https://user-images.githubusercontent.com/55340851/77147824-8d53a600-6ad1-11ea-8dfb-a6a48cca187a.png" height="500px"; width="49%"; />
+  <img src="https://user-images.githubusercontent.com/55340851/77151919-461de300-6ada-11ea-9351-eb09d4a02543.png" height="500px"; width="49%"; />
 </p>
 
 ## アプリ概要
@@ -86,14 +87,14 @@ https://xkoh.hatenadiary.com/archive/2020
 ### 投稿機能
 ・タグ投稿機能、プレビュー画像表示、コメント投稿<br>
 <p>
-<img alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png" width: 50%; display: block; text-align: center;>
+<img src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png" height="550px"; width="60%"; />
 </p>
 
 ### マイページ
 ・タグ別達成率表示(円グラフ)、日々の学習時間表示(線グラフ)<br>
+・お気に入りの投稿表示、フォロー/フォロワー表示<br>
 <p>
-<img src="https://user-images.githubusercontent.com/55340851/77145859-0ac8e780-6acd-11ea-96a8-046578262f79.png">
-・お気に入りの投稿表示、フォロー/フォロワー表示
+<img src="https://user-images.githubusercontent.com/55340851/77145859-0ac8e780-6acd-11ea-96a8-046578262f79.png" height="600px"; width="60%"; />
 </p>
 
 ### その他
