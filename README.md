@@ -3,7 +3,7 @@
 <br>
 
 
-<img style=" width: 49% display: block; text-align: center;" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
+<img style=" width: 49% display: block; text-align: center;" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/77147824-8d53a600-6ad1-11ea-8dfb-a6a48cca187a.png">
 
 ## アプリ概要
 ①習得したいスキルをタグ付けして、学習時間と一緒に投稿。  
