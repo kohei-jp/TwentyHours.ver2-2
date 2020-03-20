@@ -5,6 +5,8 @@
 <p text-align: center>
   <img src="https://user-images.githubusercontent.com/55340851/77147824-8d53a600-6ad1-11ea-8dfb-a6a48cca187a.png" height="500px"; width="49%"; />
   <img src="https://user-images.githubusercontent.com/55340851/77151919-461de300-6ada-11ea-9351-eb09d4a02543.png" height="500px"; width="49%"; />
+  <img src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png" height="500px"; width="49%"; />
+  <img src="https://user-images.githubusercontent.com/55340851/77145859-0ac8e780-6acd-11ea-96a8-046578262f79.png" height="500px"; width="49%"; />
 </p>
 
 ## アプリ概要
@@ -100,11 +102,12 @@ https://xkoh.hatenadiary.com/archive/2020
 ### その他
 #### ・詳細画面
 コメント投稿機能(ajax通信)
+#### ・編集画面
+
 
 ## 今後実装したい技術
-・現在、シンプルな見た目になっており、スキル習得した際の  
-  アニメーションの演出など、UIをリッチにしていきたい。  
-・チャット機能の実装
-・コードを美しく書く  
+・20時間の学習が達成し、スキル習得した際にアニメーションの演出など、UIをリッチにしていきたい。    
+・チャット機能の実装  
+・コードを美しく書く    
 ・Dockerの導入  
 ・CircleCIの導入  
