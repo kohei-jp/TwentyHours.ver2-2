@@ -2,8 +2,9 @@
 「日々の学習」を、共有・記録するアプリケーション
 <br>
 
-
-<img alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/77147824-8d53a600-6ad1-11ea-8dfb-a6a48cca187a.png" style=" width: 33%; display: block; text-align: center;">
+<p text-align: center>
+  <img src="https://user-images.githubusercontent.com/55340851/77147824-8d53a600-6ad1-11ea-8dfb-a6a48cca187a.png" height="500px"; width="49%"; />
+</p>
 
 ## アプリ概要
 ①習得したいスキルをタグ付けして、学習時間と一緒に投稿。  
@@ -84,12 +85,16 @@ https://xkoh.hatenadiary.com/archive/2020
 
 ### 投稿機能
 ・タグ投稿機能、プレビュー画像表示、コメント投稿<br>
-<img style=" width: 50% display: block; text-align: center;" alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png">
+<p>
+<img alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png" width: 50%; display: block; text-align: center;>
+</p>
 
 ### マイページ
 ・タグ別達成率表示(円グラフ)、日々の学習時間表示(線グラフ)<br>
-<img style=" width: 50% display: block; text-align: center;" alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/77145859-0ac8e780-6acd-11ea-96a8-046578262f79.png">
+<p>
+<img src="https://user-images.githubusercontent.com/55340851/77145859-0ac8e780-6acd-11ea-96a8-046578262f79.png">
 ・お気に入りの投稿表示、フォロー/フォロワー表示
+</p>
 
 ### その他
 #### ・詳細画面
