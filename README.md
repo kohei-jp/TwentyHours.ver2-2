@@ -3,7 +3,8 @@
 <br>
 
 
-<img style=" width: 80% display: block; text-align: center;" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
+<img style=" width: 49% display: block; text-align: center;" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
+<img style=" width: 49% display: block; text-align: center;" alt="マイページ" src="https://user-images.githubusercontent.com/55340851/77145332-90e42e80-6acb-11ea-91f7-64d9e7b6f2f7.png">
 
 
 ## アプリ概要
@@ -31,7 +32,7 @@
 ・ツイートへのコメント(ajax)  
 ・ツイートへの良いね機能  
 ・タグ付けされたツイートの合計時間を円グラフ表示  
-・日々の学習時間のグラフ表示  
+・日々の学習時間のグラフ表示(Chart.js)  
 ・ページネーション機能(kaminari)  
 
 
@@ -41,14 +42,14 @@
 - Haml/Scss   
 - JQuary  
 - MySQL 5.6
-- GitHub, Git    
+- GitHub, Git 
 - Capstrano
 - AWS
   - EC2  Amazon Elastic Compute Cloud 
   - S3  Amazon Simple Storage Service
   - ALB  Application Load Balancer
 - Nginx, Unicorn  
-<!-- - Rspec  -->
+- Rspec 
 
 <p text-align: center>
   <a href="https://rubyonrails.org/"><img src="https://meltingrabbit.com/blog/article/2018081501/top.jpg" height="45px"; /></a>
@@ -72,7 +73,7 @@ https://github.com/kohei-jp/TwentyHours.ver2-2.git
 - テストユーザ用アカウント(Email / Password)
   - Email: test@gmail.com
   - Password: aaaa1111  
-※ ヘッダーの「ログインボタン」よりログイン出来ます。
+※ ヘッダーの「ログイン」ボタンよりログイン出来ます。
 
 ## 👀 Author's blog
 https://xkoh.hatenadiary.com/archive/2020
@@ -85,7 +86,6 @@ https://xkoh.hatenadiary.com/archive/2020
 
 ### 投稿機能
 ・タグ投稿機能、プレビュー画像表示、コメント投稿<br>
-※現在、本番環境でjsが効いておらず、一時的にプレビュー画像が出ません。
 <img style=" width: 75% display: block; text-align: center;" alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png">
 
 ### マイページ

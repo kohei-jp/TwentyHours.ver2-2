@@ -24,7 +24,7 @@
         //円グラフ
         %ul.progress
           - @pietimes.each do |key, value|
-            - if value <= 20
+            - if value < 20
               %li{"data-name" => "#{key}", "data-percent" => "#{value * 100 / 20} %"}
                 = render "pietimes"
                 %svg{:viewbox => "-10 -10 220 220"}

@@ -91,7 +91,6 @@ GEM
       mini_mime (>= 0.1.3)
     chart-js-rails (0.1.7)
       railties (> 3.1)
-    chartkick (3.3.1)
     childprocess (3.0.0)
     choice (0.2.0)
     chunky_png (1.3.11)
@@ -383,7 +382,6 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave
   chart-js-rails (~> 0.1.4)
-  chartkick
   coffee-rails (~> 4.2)
   compass-rails (= 3.1.0)
   devise
