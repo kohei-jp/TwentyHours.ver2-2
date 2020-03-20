@@ -96,7 +96,8 @@
             position: absolute;
             width: 100%;
             bottom: -2rem;
-            font-weight:400;
+            font-weight: bold;
+            font-size: 12px;
         }
         &:after {
             content: attr(data-percent);
@@ -129,18 +130,7 @@
 }
 
 
-.graph{
-  position: relative;
-  .y-high{
-    position: absolute;
-    top: 0px;
-    left: 30px;
-    font-size: 14px;
-  }
-  .y-low{
-    position: absolute;
-    top: 220px;
-    left: 40px;
-    font-size: 14px;
-  }
+.container {
+  background-color: rgba(0, 0,0,0.3);
+  color: white;
 }
