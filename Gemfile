@@ -93,8 +93,8 @@ gem 'jquery-rails'
 gem 'font-awesome-sass'
 
 # グラフ
-gem "chartkick"
 gem 'groupdate'
+gem 'chart-js-rails', '~> 0.1.4'
 
 
 # 画像

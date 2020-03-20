@@ -687,21 +687,20 @@ div.contents_show.row {
 
 .last_time {
   position: absolute;
-  left: 80px;
+  left: 45px;
   top: 75px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .last_bar {
   position: absolute;
   top: 110px;
-  width: 120px;
+  width: 80px;
   height: 40px;
   padding-top: 10px;
   text-align: center;
   border-top: solid;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 16px;
   color: $white;
 }
 
