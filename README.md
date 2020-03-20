@@ -4,18 +4,16 @@
 
 
 <img style=" width: 49% display: block; text-align: center;" alt="アプリ トップ" src="https://user-images.githubusercontent.com/55340851/75805232-cd721380-5dc4-11ea-8602-1429e165a524.png">
-<img style=" width: 49% display: block; text-align: center;" alt="マイページ" src="https://user-images.githubusercontent.com/55340851/77145332-90e42e80-6acb-11ea-91f7-64d9e7b6f2f7.png">
-
 
 ## アプリ概要
 ①習得したいスキルをタグ付けして、学習時間と一緒に投稿。  
 ↓  
-②特徴としては、スキルを習得する際のノウハウとして、出来るだけハードルを低くし、  
-  同じタグで「20時間」を達成  のゴールとしている。  
+②スキルを習得する際のノウハウとして、出来るだけハードルを低くし、  
+  同じタグ(学習項目)について「20時間」を達成のゴールとしている。  
 ↓  
 ③スキルの習得する際のハードルを下げて、継続を促すアプリ。  
 ↓  
-④学習の継続を見える化するために、学習時間のグラフ表示。  
+④学習の継続を見える化するために、日々の学習時間のグラフ表示。  
   各タグについて達成率を円グラフにて表示。  
 ↓  
 ⑤他の人をフォローし合え、お互いの進捗を一覧画面でも確認可能。  
@@ -90,6 +88,7 @@ https://xkoh.hatenadiary.com/archive/2020
 
 ### マイページ
 ・タグ別達成率表示(円グラフ)、日々の学習時間表示(線グラフ)<br>
+<img style=" width: 75% display: block; text-align: center;" alt="投稿機能" src="https://user-images.githubusercontent.com/55340851/77145859-0ac8e780-6acd-11ea-96a8-046578262f79.png">
 ・お気に入りの投稿表示、フォロー/フォロワー表示
 <img style=" width: 85% display: block; text-align: center;" alt="マイページ" src="https://user-images.githubusercontent.com/55340851/76150151-995f6100-60ea-11ea-8d0d-1aa593998c9c.png">
 
@@ -102,6 +101,5 @@ https://xkoh.hatenadiary.com/archive/2020
   アニメーションの演出など、UIをリッチにしていきたい。  
 ・チャット機能の実装
 ・コードを美しく書く  
-・Rspecの導入  
 ・Dockerの導入  
 ・CircleCIの導入  
