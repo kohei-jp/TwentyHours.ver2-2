@@ -1,8 +1,8 @@
 class Tweet < ApplicationRecord
-  validates:time, presence: true
-  validates:text, length: { maximum: 16 }
-  validates:tag, presence: true
-  validates:user, presence: true
+  validates :time, presence: true
+  validates :text, length: { maximum: 16 }
+  validates :tag, presence: true
+  validates :user, presence: true
 
   has_many :comments
   has_many :favorites

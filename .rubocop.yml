@@ -32,3 +32,21 @@ Style/FrozenStringLiteralComment:
 # Use nested module/class definitions instead of compact style. を無視
 Style/ClassAndModuleChildren:
   Enabled: false
+
+
+Style/MutableConstant:
+ Enabled: false
+
+Style/PercentLiteralDelimiters:
+ Enabled: false
+
+# do .. end から更にメソッドチェーンすると見づらいので
+# auto-correct せず、自分で修正する
+# spec 内は見た目が綺麗になるので許可
+Style/BlockDelimiters:
+  AutoCorrect: false
+  Exclude:
+    - "spec/**/*"
+
+Style/BlockComments:
+ Enabled: false

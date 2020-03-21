@@ -45,9 +45,9 @@
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowAdjacentOneLineDefs, NumberOfEmptyLines.
-Layout/EmptyLineBetweenDefs:
-  Exclude:
-    - 'app/controllers/tweets_controller.rb'
+# Layout/EmptyLineBetweenDefs:
+#   Exclude:
+#     - 'app/controllers/tweets_controller.rb'
 
 # Offense count: 16
 # Cop supports --auto-correct.
@@ -201,46 +201,46 @@ Layout/SpaceAroundOperators:
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.
 # SupportedStyles: space, no_space
 # SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceBeforeBlockBraces:
-  Exclude:
-    - 'spec/controllers/tweets_controller_spec.rb'
+# Layout/SpaceBeforeBlockBraces:
+#   Exclude:
+#     - 'spec/controllers/tweets_controller_spec.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Layout/SpaceBeforeComma:
-  Exclude:
-    - 'app/models/user.rb'
+# Layout/SpaceBeforeComma:
+#   Exclude:
+#     - 'app/models/user.rb'
 
 # Offense count: 7
 # Cop supports --auto-correct.
 # Configuration parameters: AllowForAlignment.
-Layout/SpaceBeforeFirstArg:
-  Exclude:
-    - 'app/models/comment.rb'
-    - 'app/models/tag.rb'
-    - 'app/models/tweet.rb'
-    - 'config/routes.rb'
+# Layout/SpaceBeforeFirstArg:
+#   Exclude:
+#     - 'app/models/comment.rb'
+#     - 'app/models/tag.rb'
+#     - 'app/models/tweet.rb'
+#     - 'config/routes.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBrackets.
 # SupportedStyles: space, no_space, compact
 # SupportedStylesForEmptyBrackets: space, no_space
-Layout/SpaceInsideArrayLiteralBrackets:
-  Exclude:
-    - 'config/environments/production.rb'
+# Layout/SpaceInsideArrayLiteralBrackets:
+#   Exclude:
+#     - 'config/environments/production.rb'
 
 # Offense count: 18
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces, SpaceBeforeBlockParameters.
 # SupportedStyles: space, no_space
 # SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceInsideBlockBraces:
-  Exclude:
-    - 'spec/factories/comments.rb'
-    - 'spec/factories/tags.rb'
-    - 'spec/factories/tweets.rb'
-    - 'spec/factories/users.rb'
+# Layout/SpaceInsideBlockBraces:
+#   Exclude:
+#     - 'spec/factories/comments.rb'
+#     - 'spec/factories/tags.rb'
+#     - 'spec/factories/tweets.rb'
+#     - 'spec/factories/users.rb'
 
 # Offense count: 3
 # Cop supports --auto-correct.
@@ -255,9 +255,9 @@ Layout/SpaceInsideHashLiteralBraces:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: space, no_space
-Layout/SpaceInsideParens:
-  Exclude:
-    - 'spec/controllers/tweets_controller_spec.rb'
+# Layout/SpaceInsideParens:
+#   Exclude:
+#     - 'spec/controllers/tweets_controller_spec.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
@@ -330,9 +330,9 @@ Style/AsciiComments:
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Style/BlockComments:
-  Exclude:
-    - 'spec/spec_helper.rb'
+# Style/BlockComments:
+#   Exclude:
+#     - 'spec/spec_helper.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -341,9 +341,9 @@ Style/BlockComments:
 # ProceduralMethods: benchmark, bm, bmbm, create, each_with_object, measure, new, realtime, tap, with_object
 # FunctionalMethods: let, let!, subject, watch
 # IgnoredMethods: lambda, proc, it
-Style/BlockDelimiters:
-  Exclude:
-    - 'spec/features/tweet_spec.rb'
+# Style/BlockDelimiters:
+#   Exclude:
+#     - 'spec/features/tweet_spec.rb'
 
 # Offense count: 10
 # Cop supports --auto-correct.
@@ -400,22 +400,22 @@ Style/BlockDelimiters:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: literals, strict
-Style/MutableConstant:
-  Exclude:
-    - 'app/models/user.rb'
+# Style/MutableConstant:
+#   Exclude:
+#     - 'app/models/user.rb'
 
 # Offense count: 3
 # Cop supports --auto-correct.
 # Configuration parameters: PreferredDelimiters.
-Style/PercentLiteralDelimiters:
-  Exclude:
-    - 'config/deploy.rb'
-    - 'config/deploy/production.rb'
-    - 'config/initializers/assets.rb'
+# Style/PercentLiteralDelimiters:
+#   Exclude:
+#     - 'config/deploy.rb'
+#     - 'config/deploy/production.rb'
+#     - 'config/initializers/assets.rb'
 
 # Offense count: 6
 # Cop supports --auto-correct.
 # Configuration parameters: MinSize.
 # SupportedStyles: percent, brackets
-Style/SymbolArray:
-  EnforcedStyle: brackets
+# Style/SymbolArray:
+#   EnforcedStyle: brackets
