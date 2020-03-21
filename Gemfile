@@ -38,7 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # test
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
@@ -86,7 +86,7 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'pry-rails'
 gem 'sprockets', '3.7.2'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # グラフ
 gem 'chart-js-rails', '~> 0.1.4'

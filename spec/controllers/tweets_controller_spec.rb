@@ -37,7 +37,7 @@ describe TweetsController do
     it "populates an array of tweets ordered by created_at DESC" do
       tweets = create_list(:tweet, 3) # tweetを3つ保存
       get :index # indexアクションにリクエスト
-      expect(assigns(:tweets)).to match(tweets.sort{ |a, b| b.created_at <=> a.created_at } ) # <=> 演算子、ブロック変数
+      expect(assigns(:tweets)).to match(tweets.sort { |a, b| b.created_at <=> a.created_at }) # <=> 演算子、ブロック変数
     end
 
     it "renders the :index template" do

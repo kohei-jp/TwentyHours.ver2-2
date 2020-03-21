@@ -52,6 +52,7 @@
   - ALB  Application Load Balancer
 - Nginx, Unicorn  
 - Rspec 
+- Rubocup
 
 <p text-align: center>
   <a href="https://rubyonrails.org/"><img src="https://meltingrabbit.com/blog/article/2018081501/top.jpg" height="45px"; /></a>
@@ -63,6 +64,7 @@
   <a href="https://aws.amazon.com/jp/ec2/"><img src="https://blog.ismg.kdl.co.jp/wp-content/uploads/2017/05/ec2.png" height="60px;" /></a>
   <a href="https://aws.amazon.com/jp/s3/"><img src="https://user-images.githubusercontent.com/55340851/76168205-d55cf980-61b0-11ea-8f98-b4778577810e.png" height="60px"; /></a>
   <a href="https://docs.aws.amazon.com/ja_jp/elasticloadbalancing/latest/application/introduction.html"><img src="https://user-images.githubusercontent.com/55340851/76168199-c9713780-61b0-11ea-8066-bb5ea1321e2f.png" height="60px"; /></a>
+  <a href="https://rubocop.readthedocs.io/en/latest/"><img src="https://user-images.githubusercontent.com/55340851/77221004-ff3af680-6b88-11ea-84aa-c4cbf94d03a2.png" height="60px"; /></a>
 </p>
 
 
