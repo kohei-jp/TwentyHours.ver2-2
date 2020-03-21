@@ -68,14 +68,13 @@
 
 ## 🌐 App URL
 http://20hours-1582419451.ap-northeast-1.elb.amazonaws.com/
-
-
-## 💬 Usage
-https://github.com/kohei-jp/TwentyHours.ver2-2.git
 - テストユーザ用アカウント(Email / Password)
   - Email: test@gmail.com
   - Password: aaaa1111  
 ※ ヘッダーの「ログイン」ボタンよりログイン出来ます。
+
+## 💬 Usage
+https://github.com/kohei-jp/TwentyHours.ver2-2.git
 
 ## 👀 Author's blog
 https://xkoh.hatenadiary.com/archive/2020

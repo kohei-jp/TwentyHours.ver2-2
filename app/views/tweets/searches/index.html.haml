@@ -7,12 +7,12 @@
 .contents.row
   - @tweets.each do |tweet| 
     - if tweet.image.present?
-      .content_post{:animation => "bounceIn", :style => "background-image: url(#{tweet.image});"}
+      .content_post{:animation => "bounceIn", :style => "background-image: url(#{tweet.image});" }
         = render partial: 'tweets/index', locals: { tweet: tweet }
     - else
       .content_post.image{:animation => "bounceIn"}
         = render partial: 'tweets/index', locals: { tweet: tweet }
-      
+
   .attive
     %h1.title 
       <みんなのスキル習得状況> 

@@ -5,6 +5,6 @@ FactoryBot.define do
     time {"1.0"}
     created_at { Faker::Time.between(from: DateTime.now - 2, to: DateTime.now) }
     user
-    tag 
+    tag
   end
 end

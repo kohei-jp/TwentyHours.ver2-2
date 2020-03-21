@@ -9,7 +9,7 @@ describe Tag do
 
     # 2. tag_nameが空では登録できないこと
     it "is invalid without a tag_name" do
-      tag = build(:tag, tag_name:"")
+      tag = build(:tag, tag_name: "")
       tag.valid?
       expect(tag.errors[:tag_name]).to include("を入力してください")
     end

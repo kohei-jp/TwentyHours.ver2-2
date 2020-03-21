@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  # 変更後
-devise_for :users, controllers: {
-  registrations: 'users/registrations'
-}
-  root  'tops#index'
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
+  root 'tops#index'
   namespace :tweets do
     resources :searches, only: :index
   end

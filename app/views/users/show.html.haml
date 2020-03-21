@@ -37,11 +37,6 @@
         / Defining Angle Gradient Colors
         = render 'colors'
 
-        -# .graph 削除予定 (application.html.haml、applocation.jsも)
-        -#   = line_chart @mytimes, min: 0, max: 20, width: "600px", height: "300px", colors: ["white", "#fff"], xtitle: "Day", ytitle: "commit[h]", messages: {empty: "No data"}
-        -#   .y-high 20
-        -#   .y-low 0
-
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js", :type => "text/javascript"}
         .container{:style => "width:100%"}
           %canvas#canvas

@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
   def create
     favorite = current_user.favorites.build(tweet_id: params[:tweet_id])
-    #current_userに関連したuser_idを保存。 tweet_idはURIからきたものがparam[:id]に入っている。
+    # current_userに関連したuser_idを保存。 tweet_idはURIからきたものがparam[:id]に入っている。
     favorite.save
     redirect_back(fallback_location: root_path)
   end

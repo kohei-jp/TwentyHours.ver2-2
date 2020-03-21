@@ -17,8 +17,8 @@ feature 'tweet', type: :feature do
     visit tweets_path
     expect(page).to have_content('投稿する')
 
-     # ツイートの投稿
-     expect {
+    # ツイートの投稿
+    expect {
       click_link('投稿する')
       expect(current_path).to eq new_tweet_path
       # find('input[type="file"]').click
