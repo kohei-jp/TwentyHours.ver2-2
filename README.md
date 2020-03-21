@@ -33,7 +33,7 @@
 　でTEDTalkで講演などもされていっらしゃるJosh・Kaufmanさんのスキル習得ノウハウをヒントに設計しました。   
 
 
-## 機能一覧
+## ■ 機能一覧
 ・ユーザ登録、ログイン機能  
 ・ユーザー間でのフォロー、フォロワー機能  
 ・ツイート投稿機能(画像プレビュー表示)  
@@ -46,7 +46,7 @@
 ・ページネーション機能(kaminari)  
 
 
-## 使用技術
+## ■ 使用技術
 - Ruby 2.6.2  
 - Rails 5.2.4  
 - Haml/Scss   
@@ -91,10 +91,10 @@ https://github.com/kohei-jp/TwentyHours.ver2-2.git
 https://xkoh.hatenadiary.com/archive/2020
 <br>
 
-## ER図
+## ■ ER図
 ￼￼<img width="70%" alt="ER図" src="https://user-images.githubusercontent.com/55340851/75799983-3f922a80-5dbc-11ea-885b-a2f554fded03.png">
 
-## 機能紹介
+## ■ 機能紹介
 
 ### 投稿機能
 ・タグ投稿機能、プレビュー画像表示、コメント投稿<br>
@@ -115,7 +115,7 @@ https://xkoh.hatenadiary.com/archive/2020
 #### ・編集画面
 
 
-## 今後実装したい技術
+## ■ 今後実装したい技術
 ・20時間の学習が達成し、スキル習得した際にアニメーション演出など、  
 　モチベーションが上がる様なリッチなUIにする。    
 ・Twitter APIを搭載し、こちらのアプリでの学習報告をTwitterにも発信を行える様にする。  
