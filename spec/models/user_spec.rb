@@ -1,7 +1,6 @@
 require 'rails_helper'
 describe User do
   describe '#create' do
-
     # 1. nameとemail、passwordとpassword_confirmationが存在すれば登録できること
     it "is valid with a name, email, password, password_confirmation" do
       user = build(:user)
@@ -10,7 +9,7 @@ describe User do
 
     # 2. nameが空では登録できないこと
     it "is invalid without a name" do
-      user = build(:user, name:"")
+      user = build(:user, name: "")
       user.valid?
       expect(user.errors[:name]).to include("を入力してください")
     end
@@ -49,21 +48,21 @@ describe User do
       expect(user).to be_valid
     end
 
-    #8. emailに@が含まれない場合では登録出来ないこと
+    # 8. emailに@が含まれない場合では登録出来ないこと
     it "is invalid with an email that has no  @ " do
       user = build(:user, email: "aaaagmail.com")
       user.valid?
       expect(user.errors[:email]).to include("は不正な値です")
     end
 
-    #9. emailにドット(.)が含まれない場合では登録出来ないこと
+    # 9. emailにドット(.)が含まれない場合では登録出来ないこと
     it "is invalid with an email that has no  dot " do
       user = build(:user, email: "aaaa@gmailcom")
       user.valid?
       expect(user.errors[:email]).to include("は不正な値です")
     end
 
-    # 8. 重複したemailが存在する場合登録できないこと
+    # 10. 重複したemailが存在する場合登録できないこと
     it "is invalid with a duplicate email address" do
       user = create(:user)
       another_user = build(:user, email: user.email)
@@ -71,14 +70,14 @@ describe User do
       expect(another_user.errors[:email]).to include("はすでに存在します")
     end
 
-    # 9. passwordが6文字以上であれば登録できること
+    # 11. passwordが6文字以上であれば登録できること
     it "is valid with a password that has more than 6 characters " do
       user = build(:user, password: "aaa111", password_confirmation: "aaa111")
       user.valid?
       expect(user).to be_valid
     end
 
-    # 10. passwordが5文字以下であれば登録できないこと
+    # 12. passwordが5文字以下であれば登録できないこと
     it "is invalid with a password that has less than 6 and including alphanumeric characters   " do
       user = build(:user, password: "aaa11", password_confirmation: "aaa11")
       user.valid?

@@ -9,14 +9,14 @@ describe Favorite do
 
     # 2. tweet_idが空では登録できないこと
     it "is invalid without a tweet_id" do
-      favorite = build(:favorite, tweet_id:"")
+      favorite = build(:favorite, tweet_id: "")
       favorite.valid?
       expect(favorite.errors[:tweet]).to include("を入力してください")
     end
 
     # 3. tweet_idが空では登録できないこと
     it "is invalid without a user_id" do
-      favorite = build(:favorite, user_id:"")
+      favorite = build(:favorite, user_id: "")
       favorite.valid?
       expect(favorite.errors[:user]).to include("を入力してください")
     end

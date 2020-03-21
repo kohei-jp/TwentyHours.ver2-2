@@ -14,6 +14,7 @@ class Tweet < ApplicationRecord
 
   def self.search(search)
     return Tweet.all unless search
+
     Tweet.where('text LIKE(?)', "%#{search}%")
   end
 
@@ -24,8 +25,8 @@ class Tweet < ApplicationRecord
   # SQLインジェクション対策
   def self.search(search)
     return Tweet.all unless search
-    search = "%#{search}%"
-    Tweet.find_by_sql(["select * from tweets where text like ? ", search]) #この1行
-  end
 
+    search = "%#{search}%"
+    Tweet.find_by_sql(["select * from tweets where text like ? ", search]) # この1行
+  end
 end

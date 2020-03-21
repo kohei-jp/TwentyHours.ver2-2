@@ -39,32 +39,29 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  
   # test
-  gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
-  
-  
-  #capistrano
+  gem 'rspec-rails'
+  # capistrano
   gem 'capistrano'
-  gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rails-erd'
-  
+  gem 'rubocop', require: false
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :production do
@@ -73,33 +70,29 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'faker', "~> 2.8"
   gem 'capybara', '>= 2.15'
+  gem 'faker', "~> 2.8"
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'pry-rails'
 gem 'compass-rails', '3.1.0'
-gem 'sprockets', '3.7.2'
+gem 'devise'
+gem 'font-awesome-sass'
 gem 'haml-rails'
 gem 'jquery-rails'
-gem 'devise'
 gem 'kaminari'
-gem 'jquery-rails'
-gem 'font-awesome-sass'
+gem 'pry-rails'
+gem 'sprockets', '3.7.2'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # グラフ
-gem 'groupdate'
 gem 'chart-js-rails', '~> 0.1.4'
-
+gem 'groupdate'
 
 # 画像
 gem 'carrierwave'
-gem 'mini_magick'
 gem 'fog-aws'
-# Form Helper
-# gem 'simple_form'
+gem 'mini_magick'

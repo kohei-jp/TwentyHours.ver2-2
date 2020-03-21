@@ -3,15 +3,15 @@
 lock '3.12.0'
 
 # qiitaを参考に以下3行追加(あやっていれば、削除する予定)
-#secrets.ymlではリリースバージョン間でシンボリックリンクにして共有
-#credentials.yml.encではmasterkeyにする（今回）
+# secrets.ymlではリリースバージョン間でシンボリックリンクにして共有
+# credentials.yml.encではmasterkeyにする（今回）
 set :linked_files, %w{config/master.key}
 
 # Capistranoのログの表示に利用する
 set :application, '20Hours'
 
 # どのリポジトリからアプリをpullするかを指定する
-set :repo_url,  'git@github.com:kohei-jp/20Hours.git'
+set :repo_url, 'git@github.com:kohei-jp/20Hours.git'
 
 # バージョンが変わっても共通で参照するディレクトリを指定
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
@@ -21,8 +21,7 @@ set :rbenv_ruby, '2.6.2'
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/twentyhours.pem'] 
-
+                  keys: ['~/.ssh/twentyhours.pem']
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 
@@ -37,13 +36,11 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 
-  # qiitaを参考に以下全ての行追加(本番環境のみ画像uploadsする分岐) 
+  # qiitaを参考に以下全ての行追加(本番環境のみ画像uploadsする分岐)
   desc 'upload master.key'
   task :upload do
     on roles(:app) do |host|
-      if test "[ ! -d #{shared_path}/config ]"
-        execute "mkdir -p #{shared_path}/config"
-      end
+      test "[ ! -d #{shared_path}/config ]" if execute "mkdir -p #{shared_path}/config"
       upload!('config/master.key', "#{shared_path}/config/master.key")
     end
   end

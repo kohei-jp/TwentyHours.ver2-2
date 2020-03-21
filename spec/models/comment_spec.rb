@@ -9,7 +9,7 @@ describe Comment do
 
     # 2. textが空では登録できないこと
     it "is invalid without a text" do
-      comment = build(:comment, text:"")
+      comment = build(:comment, text: "")
       comment.valid?
       expect(comment.errors[:text]).to include("を入力してください")
     end

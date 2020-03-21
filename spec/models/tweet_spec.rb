@@ -9,7 +9,7 @@ describe Tweet do
 
     # 2. timeが空では登録できないこと
     it "is invalid without a time" do
-      tweet = build(:tweet, time:"")
+      tweet = build(:tweet, time: "")
       tweet.valid?
       expect(tweet.errors[:time]).to include("を入力してください")
     end

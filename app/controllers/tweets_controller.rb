@@ -12,7 +12,6 @@ class TweetsController < ApplicationController
     @tweet.build_tag
   end
 
-
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
@@ -23,8 +22,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     tweet = Tweet.find(params[:id])
@@ -43,6 +41,7 @@ class TweetsController < ApplicationController
   end
 
   private
+
   def tweet_params
     params.require(:tweet).permit(:image, :text, :time, tag_attributes: [:tag_name]).merge(user_id: current_user.id)
   end
