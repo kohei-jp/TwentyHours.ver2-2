@@ -56,9 +56,9 @@
 
 <p style="margin-left=50px"; >
   <img src="https://meltingrabbit.com/blog/article/2018081501/top.jpg" height="50px"; width="70px"; margin-left="50px"; display="block"; />
-  <img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="50px"; />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" height="45px"; />
-  <img src="https://web-camp.io/magazine/wp-content/uploads/2017/03/JQuery_logo-1-1.png" height="50px"; />
+  <img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="55px"; width="130px"; />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" margin-bottom="10px"; height="45px"; />
+  <img src="https://web-camp.io/magazine/wp-content/uploads/2017/03/JQuery_logo-1-1.png" height="55px"; width="120px"; />
 </p>
 <p>
   <img src="https://user-images.githubusercontent.com/55340851/76217207-553c9f80-6255-11ea-83ad-a637b64b9b11.png" height="45px"; width="100px"; />
