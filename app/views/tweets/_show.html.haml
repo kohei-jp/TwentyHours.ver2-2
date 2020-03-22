@@ -30,3 +30,8 @@
 
 .left_low_box-down
   = "today:#{@tweet.time}h"
+  - if user_signed_in? && current_user.id == @tweet.user_id
+    .left_low_box-down--low
+      %a.twitter-share-button{"data-hashtags" => "20Hours 本日の学習", "data-lang" => "ja", "data-show-count" => "false", "data-text" => "#{@tag.tag_name}を#{@tweet.time}時間取り組みました。", :href => "https://twitter.com/share?ref_src=twsrc%5Etfw"} Tweet
+      %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
+
