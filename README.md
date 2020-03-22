@@ -107,22 +107,22 @@ https://xkoh.hatenadiary.com/archive/2020
 ### 投稿機能
 ・タグ投稿機能、プレビュー画像表示、コメント投稿<br>
 <p>
-<img src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png" height="550px"; width="60%"; />
+<img src="https://user-images.githubusercontent.com/55340851/76150083-d119d900-60e9-11ea-839e-9baf258ef83b.png" height="550px"; width="65%"; />
 </p>
 
 ### マイページ
 ・タグ別達成率表示(円グラフ)、日々の学習時間表示(線グラフ)<br>
 ・お気に入りの投稿表示、フォロー/フォロワー表示<br>
 <p>
-<img src="https://user-images.githubusercontent.com/55340851/77145859-0ac8e780-6acd-11ea-96a8-046578262f79.png" height="600px"; width="60%"; />
+<img src="https://user-images.githubusercontent.com/55340851/77145859-0ac8e780-6acd-11ea-96a8-046578262f79.png" height="600px"; width="65%"; />
 </p>
 
 ### その他
 #### ・詳細画面
-・コメント投稿機能(ajax通信)
+・コメント投稿機能(ajax通信)  
 ・Twitterへ投稿内容の共有(投稿本人のみ)
 <p>
-<img src="https://user-images.githubusercontent.com/55340851/77244376-8191ec00-6c57-11ea-9eb3-a35bcec43e0d.png" height="600px"; width="60%"; />
+<img src="https://user-images.githubusercontent.com/55340851/77247918-ead62700-6c78-11ea-8534-2f656badb355.png" height="600px"; width="65%"; />
 </p>
 
 #### ・編集画面
