@@ -111,7 +111,7 @@ https://xkoh.hatenadiary.com/archive/2020
 </p>
 
 ### マイページ
-・タグ別達成率表示(円グラフ)、日々の学習時間表示(線グラフ)<br>
+・タグ別達成率表示(円グラフ)、日々の学習時間表示(トレンド&バーグラフ)<br>
 ・お気に入りの投稿表示、フォロー/フォロワー表示<br>
 <p>
 <img src="https://user-images.githubusercontent.com/55340851/77145859-0ac8e780-6acd-11ea-96a8-046578262f79.png" height="600px"; width="65%"; />

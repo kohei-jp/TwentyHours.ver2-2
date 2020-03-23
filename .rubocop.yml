@@ -50,3 +50,6 @@ Style/BlockDelimiters:
 
 Style/BlockComments:
  Enabled: false
+
+Layout/FirstHashElementIndentation:
+ Enabled: false

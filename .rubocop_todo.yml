@@ -118,9 +118,9 @@
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, IndentationWidth.
 # SupportedStyles: special_inside_parentheses, consistent, align_braces
-Layout/FirstHashElementIndentation:
-  Exclude:
-    - 'config/deploy.rb'
+# Layout/FirstHashElementIndentation:
+#   Exclude:
+#     - 'config/deploy.rb'
 
 # Offense count: 11
 # Cop supports --auto-correct.
@@ -192,9 +192,9 @@ Layout/FirstHashElementIndentation:
 # Cop supports --auto-correct.
 # Configuration parameters: AllowForAlignment, EnforcedStyleForExponentOperator.
 # SupportedStylesForExponentOperator: space, no_space
-Layout/SpaceAroundOperators:
-  Exclude:
-    - 'config/initializers/carrierwave.rb'
+# Layout/SpaceAroundOperators:
+#   Exclude:
+#     - 'config/initializers/carrierwave.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -261,9 +261,9 @@ Layout/SpaceInsideHashLiteralBraces:
 
 # Offense count: 2
 # Cop supports --auto-correct.
-Layout/SpaceInsidePercentLiteralDelimiters:
-  Exclude:
-    - 'config/initializers/assets.rb'
+# Layout/SpaceInsidePercentLiteralDelimiters:
+#   Exclude:
+#     - 'config/initializers/assets.rb'
 
 # Offense count: 21
 # Cop supports --auto-correct.
@@ -299,9 +299,9 @@ Lint/DuplicateMethods:
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
-Lint/UnusedBlockArgument:
-  Exclude:
-    - 'config/deploy.rb'
+# Lint/UnusedBlockArgument:
+#   Exclude:
+#     - 'config/deploy.rb'
 
 # Offense count: 1
 # Lint/UselessAssignment:

@@ -39,7 +39,7 @@ namespace :deploy do
   # qiitaを参考に以下全ての行追加(本番環境のみ画像uploadsする分岐)
   desc 'upload master.key'
   task :upload do
-    on roles(:app) do |host|
+    on roles(:app) do
       test "[ ! -d #{shared_path}/config ]" if execute "mkdir -p #{shared_path}/config"
       upload!('config/master.key', "#{shared_path}/config/master.key")
     end
