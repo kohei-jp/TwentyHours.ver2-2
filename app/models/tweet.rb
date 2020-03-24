@@ -12,12 +12,6 @@ class Tweet < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-  def self.search(search)
-    return Tweet.all unless search
-
-    Tweet.where('text LIKE(?)', "%#{search}%")
-  end
-
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
   end

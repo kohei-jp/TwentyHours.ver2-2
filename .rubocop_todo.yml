@@ -247,9 +247,9 @@
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.
 # SupportedStyles: space, no_space, compact
 # SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceInsideHashLiteralBraces:
-  Exclude:
-    - 'app/models/user.rb'
+# Layout/SpaceInsideHashLiteralBraces:
+#   Exclude:
+#     - 'app/models/user.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -269,8 +269,8 @@ Layout/SpaceInsideHashLiteralBraces:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: final_newline, final_blank_line
-Layout/TrailingEmptyLines:
-  Enabled: false
+# Layout/TrailingEmptyLines:
+#   Enabled: false
 
 # Offense count: 23
 # Cop supports --auto-correct.
@@ -292,9 +292,9 @@ Layout/TrailingEmptyLines:
 #     - 'spec/rails_helper.rb'
 
 # Offense count: 1
-Lint/DuplicateMethods:
-  Exclude:
-    - 'app/models/tweet.rb'
+# Lint/DuplicateMethods:
+#   Exclude:
+#     - 'app/models/tweet.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -309,24 +309,24 @@ Lint/DuplicateMethods:
 #     - 'app/controllers/users_controller.rb'
 
 # Offense count: 1
-Metrics/AbcSize:
-  Max: 40
+# Metrics/AbcSize:
+#   Max: 50
 
 # Offense count: 6
 # Configuration parameters: CountComments, ExcludedMethods.
 # ExcludedMethods: refine
-Metrics/BlockLength:
-  Max: 61
+# Metrics/BlockLength:
+#   Max: 61
 
 # Offense count: 1
 # Configuration parameters: CountComments, ExcludedMethods.
-Metrics/MethodLength:
-  Max: 19
+# Metrics/MethodLength:
+#   Max: 19
 
 # Offense count: 111
 # Configuration parameters: AllowedChars.
-Style/AsciiComments:
-  Enabled: false
+# Style/AsciiComments:
+#   Enabled: false
 
 # Offense count: 1
 # Cop supports --auto-correct.

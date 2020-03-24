@@ -5,9 +5,9 @@ class User < ApplicationRecord
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,30}+\z/i
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  validates :password,    presence: true, format: { with: VALID_PASSWORD_REGEX, message: 'は6文字以上の英字と数字両方を含むパスワードを設定してください'}
+  validates :password,    presence: true, format: { with: VALID_PASSWORD_REGEX, message: 'は6文字以上の英字と数字両方を含むパスワードを設定してください' }
   validates :email,       presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
-  validates :name,        presence: true, length: {maximum: 6}
+  validates :name,        presence: true, length: { maximum: 6 }
 
   has_many :tweets
   has_many :comments

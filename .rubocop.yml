@@ -53,3 +53,16 @@ Style/BlockComments:
 
 Layout/FirstHashElementIndentation:
  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+# 行数を変更 use/show
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/BlockLength:
+  Max: 100
+
+Metrics/AbcSize:
+  Max: 50
