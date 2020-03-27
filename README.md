@@ -1,9 +1,4 @@
-# 20Hours
-注意) ご訪問頂き、ありがとうございます。  
-閲覧しに来て頂いた所ご迷惑お掛け致しますが、追加機能でgoogle_mapを搭載した際にWebへの  
-アクセスがHTTPであるために現在地の表示が出来ない不具合があり、HTTPSに修正し、また合わせて  
-独自ドメインに変更を行うべく、3/28ごろまでログイン出来なくなります。  
-何卒ご了承のほどお願い致します。  
+# 20Hours 
 ## ■ アプリの概要
 「日々の学習」を、共有・記録するアプリケーション
 <br>
@@ -67,10 +62,11 @@
   - EC2  Amazon Elastic Compute Cloud 
   - S3  Amazon Simple Storage Service
   - ALB  Application Load Balancer
+  - Route53 Amazon Route 53
 - Nginx, Unicorn  
 - Rspec 
 - Rubocup
-
+- https通信
 <p>
   <img src="https://meltingrabbit.com/blog/article/2018081501/top.jpg" height="50px"; width="70px"; margin-left="50px"; display="block"; />
   <img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="55px"; width="130px"; />
@@ -78,16 +74,17 @@
   <img src="https://web-camp.io/magazine/wp-content/uploads/2017/03/JQuery_logo-1-1.png" height="55px"; width="120px"; />
 </p>
 <p>
-  <img src="https://user-images.githubusercontent.com/55340851/76217207-553c9f80-6255-11ea-83ad-a637b64b9b11.png" height="45px"; width="100px"; />
   <img src="https://blog.ismg.kdl.co.jp/wp-content/uploads/2017/05/ec2.png" height="60px"; />
   <img src="https://user-images.githubusercontent.com/55340851/76168205-d55cf980-61b0-11ea-8f98-b4778577810e.png" height="60px"; />
   <img src="https://user-images.githubusercontent.com/55340851/76168199-c9713780-61b0-11ea-8066-bb5ea1321e2f.png" height="60px"; width="60px"; />
+  <img src="https://user-images.githubusercontent.com/55340851/77738084-8806d600-7052-11ea-994f-9d22a56f6830.png" height="60px"; />
+  <img src="https://user-images.githubusercontent.com/55340851/76217207-553c9f80-6255-11ea-83ad-a637b64b9b11.png" height="45px"; width="100px"; />
   <img src="https://user-images.githubusercontent.com/55340851/77221004-ff3af680-6b88-11ea-84aa-c4cbf94d03a2.png" height="60px"; />
 </p>
 
 
 ## 🌐 App URL
-http://20hours-1582419451.ap-northeast-1.elb.amazonaws.com/
+https://20hoursapp.com
 - テストユーザ用アカウント(Email / Password)
   - Email: test@gmail.com
   - Password: aaaa1111  
@@ -134,8 +131,6 @@ https://xkoh.hatenadiary.com/archive/2020
 ### カフェ表示画面
 ・Google mapより現在地の半径1.5km内の学習スペースとしてカフェを表示出来る。  
 　(Geocoding API、Maps JavaScript API、Places APIを使用。)  
-　※現在、本番環境で位置情報の取得が失敗し、修正中になります。  
- 　→http通信を採用していたため不具合が起こっており、https通信に修正中。  
 
 <p>
 <img src="https://user-images.githubusercontent.com/55340851/77721307-cb028280-702d-11ea-8965-e6c7f146aba4.png" height="600px"; width="65%"; />
