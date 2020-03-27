@@ -25,6 +25,7 @@
  　20時間を達成すると、達成率が%表示からSuccessに変わり、視覚的に分かりやすくなっています。   
 ・また、日々の学習時間と合計学習時間をグラフ表示させ、努力の見える化をしました。  
 ・このアプリを使用していないより多くの方にも報告できる様に、Twitterへ投稿内容の共有も可能。  
+・google mapにて、最寄りのカフェ(学習スペース)の表示。  
 
 ## ■ なぜ作ろうと思ったか 
 ・私自身出来ることを増やしたいと思いつつも、いざ新しい事に取り組むと慣れていない分継続するのは  
@@ -45,6 +46,7 @@
 ・ツイートをTwitterへ共有するリンク機能  
 ・タグ付けされたツイートの合計時間を円グラフ表示  
 ・日々の学習時間のグラフ表示(Chart.js)  
+・Google_mapより最寄りのカフェを表示(Maps JavaScript API..)  
 ・ページネーション機能(kaminari)  
 
 
@@ -122,6 +124,15 @@ https://xkoh.hatenadiary.com/archive/2020
 ・Twitterへ投稿内容の共有(投稿本人のみ)
 <p>
 <img src="https://user-images.githubusercontent.com/55340851/77247918-ead62700-6c78-11ea-8534-2f656badb355.png" height="600px"; width="65%"; />
+</p>
+
+### カフェ表示画面
+・Google mapより現在地の半径1.5km内の学習スペースとしてカフェを表示出来る。  
+　(Geocoding API、Maps JavaScript API、Places APIを使用。)  
+　※現在、本番環境で位置情報の取得が失敗し、修正中になります。
+
+<p>
+<img src="https://user-images.githubusercontent.com/55340851/77721307-cb028280-702d-11ea-8965-e6c7f146aba4.png" height="600px"; width="65%"; />
 </p>
 
 ### その他
