@@ -1,0 +1,8 @@
+.search-map
+  %h1 カフェの検索
+
+- provide(:title, "近くのカフェ検索")
+#gmap
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyABgKcnlbaIKjpxSdeWm0r0dHz0J59rDoA&callback=initMap&libraries=places"}
+.back-btn
+  = link_to '一覧画面へ', tweets_path, method: :get

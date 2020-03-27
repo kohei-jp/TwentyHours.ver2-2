@@ -17,4 +17,7 @@ Rails.application.routes.draw do
     get :follows, on: :member
     get :followers, on: :member
   end
+
+  resources :maps, only: [:index]
+  
 end
