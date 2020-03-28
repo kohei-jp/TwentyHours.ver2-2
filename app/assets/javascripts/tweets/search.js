@@ -65,9 +65,9 @@ $(function() {
     })
     .done(function(tweets){
       $(".contents.row").empty();
-      if(tweets.length !== 0) {            //tweetsにデータがあれば
+      $(".paginate").empty();
+      if(tweets.length !== 0) {   //tweetsにデータがあれば
         tweets.forEach(function(tweet){
-          // console.log(tweet);
           appendTweet(tweet);
         });
       }

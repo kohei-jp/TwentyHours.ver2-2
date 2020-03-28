@@ -38,8 +38,8 @@
         = render 'colors'
 
         %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js", :type => "text/javascript"}
-        .container{:style => "width:100%"}
-          %canvas#canvas
+        .container-show
+          %canvas#canvas{:height => "410px", :width => "615px"}
         :javascript
           window.onload = function() {
               ctx = document.getElementById("canvas").getContext("2d");
@@ -55,7 +55,7 @@
               datasets: [
               {
                   type: 'bar',
-                  label: 'Time/1day',
+                  label: 'Time',
                   fontColor: "＃FFF",
                   data: #{@mytimes_hour},
                   borderColor : "rgba(54,164,235,0.8)",
@@ -80,7 +80,7 @@
               display: true,
               text: '学習時間の可視化',
               fontColor: "#FFF",             // 目盛りの色
-              fontSize: 10                   // フォントサイズ
+              fontSize: 12                   // フォントサイズ
               },
               responsive: true,
               
@@ -88,14 +88,14 @@
                 xAxes: [{   
                     scaleLabel: {             
                       display: true,          
-                      labelString: 'Day', 
+                      labelString: 'date', 
                       fontColor: "＃FFF",             // 文字の色
                       fontFamily: "sans-serif",
-                      fontSize: 10                   // フォントサイズ
+                      fontSize: 12                   // フォントサイズ
                     },
                     ticks: {
                           fontColor: "#FFF",         
-                          fontSize: 10,
+                          fontSize: 12,
                           beginAtZero: true,
                           max: 5,                
                       },
@@ -110,14 +110,14 @@
                       fontFamily: "sans-serif",
                       fontColor: "＃FFF",             // 文字の色
                       fontFamily: "sans-serif",
-                      fontSize: 10                   // フォントサイズ
+                      fontSize: 12                   // フォントサイズ
                       },
                       ticks: {
                           max: 100,
                           min: 0,
                           stepSize: 10,
                           fontColor: "#FFF",             // 目盛りの色
-                          fontSize: 10                   // フォントサイズ
+                          fontSize: 12                   // フォントサイズ
                       },
                   }, {
                       id: "y-axis-2",
@@ -129,14 +129,14 @@
                       fontFamily: "sans-serif",
                       fontColor: "＃FFF",             // 文字の色
                       fontFamily: "sans-serif",
-                      fontSize: 10                   // フォントサイズ
+                      fontSize: 12                   // フォントサイズ
                       },
                       ticks: {
                           max: 20,
                           min: 0,
                           stepSize: 2,
                           fontColor: "#FFF",             // 目盛りの色
-                          fontSize: 10                   // フォントサイズ
+                          fontSize: 12                   // フォントサイズ
                       },
                       gridLines: {
                           drawOnChartArea: false, 

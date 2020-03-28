@@ -2,7 +2,7 @@
   %p.user_page
     = "Everyone commit"
   = form_with(url: tweets_searches_path, local: true, method: :get, class: "search-form") do |form|
-    = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
+    = form.text_field :keyword, placeholder: "コメントを検索する", class: "search-input"
     = form.submit "検索", class: "search-btn"
 .contents.row
   - @tweets.each do |tweet| 
@@ -13,19 +13,19 @@
       .content_post{:animation => "bounceIn", :style => "background-image: url(/coffee.jpg);"}
         = render partial: 'index', locals: { tweet: tweet }
       
-  .attive
-    = link_to 'カフェを探す', maps_path, method: :get
-    %h1.title 
-      <みんなのスキル習得状況> 
-    .attive--area
-      - @times.each do |array, hour|
-        - name = array[0]
-        - subject = array[1]
-        - if 20 - hour > 0
-          ・"#{name}さんは "#{subject}" を合計#{hour}時間勉強しました。残り"#{ 20 - hour}時間"で取得です！"
-          %br
-        - else 
-          .attive--area__success・"#{name}さん! "#{subject}" 20時間達成です！おめでとうございます"
+.attive
+  = link_to 'カフェを探す', maps_path, method: :get
+  %h1.title 
+    <みんなのスキル習得状況> 
+  .attive--area
+    - @times.each do |array, hour|
+      - name = array[0]
+      - subject = array[1]
+      - if 20 - hour > 0
+        ・"#{name}さんは "#{subject}" を合計#{hour}時間勉強しました。残り"#{ 20 - hour}時間"で取得です！"
+        %br
+      - else 
+        .attive--area__success・"#{name}さん! "#{subject}" 20時間達成です！おめでとうございます"
 
 
 .paginate

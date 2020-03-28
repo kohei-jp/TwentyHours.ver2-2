@@ -66,7 +66,7 @@
 - Nginx, Unicorn  
 - Rspec 
 - Rubocup
-- https通信
+- HTTPS通信
 <p>
   <img src="https://meltingrabbit.com/blog/article/2018081501/top.jpg" height="50px"; width="70px"; margin-left="50px"; display="block"; />
   <img src="https://glaucocustodio.github.io/assets/haml-cover.jpg?1" height="55px"; width="130px"; />

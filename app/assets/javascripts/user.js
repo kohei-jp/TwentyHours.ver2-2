@@ -15,4 +15,4 @@ $(document).ready(function() {
         $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
       }
   });
-});z
+});

@@ -5,12 +5,11 @@ $dark: #666;
 $darkGray: #999999;
 $gray: #D8D8D8;
 $lightGray: #f5f5f3;
-$white: white;
+$white: #ffffff;
 $green: #9ec34b;
-
+$black: #000;
 
 //mixin
-
 @mixin boxBase($margin: 30px auto, $padding: 10px) {
   margin: $margin;
   padding: $padding;
@@ -35,11 +34,7 @@ $green: #9ec34b;
 body {
   height: 100%;
   background-color: $dark;
-}
-
-body {
   padding-top: 60px;
-
 }
 
 h1,h2,h3,h4,h5,h6,body {
@@ -53,7 +48,7 @@ line-height: 1.57;
 
 a {
   text-decoration: none;
-  color: lightgray;
+  color: $lightGray;
 
   &:hover {
     color: $green;
@@ -87,7 +82,7 @@ a {
 
 .btn-box:hover {
   border: 2px solid transparent;
-  color: #FFF;
+  color: $white;
 }
 
 .btn-box:before, .btn-box:after {
@@ -104,14 +99,14 @@ a {
 }
 
 .btn-box:before {
-  border-bottom: 2px solid #FFF;
-  border-left: 2px solid #FFF;
+  border-bottom: 2px solid $white;
+  border-left: 2px solid $white;
   transform-origin: 100% 0%;
 }
 
 .btn-box:after {
-  border-top: 2px solid #FFF;
-  border-right: 2px solid #FFF;
+  border-top: 2px solid $white;
+  border-right: 2px solid $white;
   transform-origin: 0% 100%;
 }
 
@@ -137,7 +132,7 @@ a {
 header.header {
   @include basePadding;
   border-bottom: 1px solid $gray;
-  background-color: #000;
+  background-color: $black;
   position: fixed;
   top: 0;
   left: 0;
@@ -151,10 +146,10 @@ header.header {
       line-height: 41px;
       position: absolute;
       left: 0px;
-      color: #fff;
+      color: $white;
       width: 100px;
       a {
-        color: #fff;
+        color: $white;
         display: block;
         width: 20px;
       }
@@ -203,16 +198,16 @@ header.header {
       position: absolute;
       top: 46px;
       right: 0;
-      border-left: 1px solid #d8d8d8;
-      border-right: 1px solid #d8d8d8;
+      border-left: 1px solid $lightGray;
+      border-right: 1px solid $lightGray;
       box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
       li {
-        background-color: black;
+        background-color: $black;
         a {
           display: block;
           padding: 10px 20px;
           text-align: left;
-          border-bottom: 1px solid #d8d8d8;
+          border-bottom: 1px solid $lightGray;
         }
       }
      }
@@ -239,12 +234,15 @@ header.header {
 .title{
   margin-top: 20px;
   margin-bottom: 20px;
-  color: white;
+  color: $white;
 }
 
 .attive{
+  margin: 20px auto 0;
+  width: 680px;
+  height: 320px;
   &--area{
-    background-color: black;
+    background-color: $black;
     font-size: 14px;
     height: 200px;
     overflow: scroll;
@@ -267,7 +265,7 @@ header.header {
 /* スクロールの背景の設定 */
 ::-webkit-scrollbar-track {
   border-radius: 5px;
-  box-shadow: 0 0 4px #aaa inset;
+  box-shadow: 0 0 4px $dark inset;
 }
 
 /* スクロールのつまみ部分の設定 */
@@ -278,7 +276,7 @@ header.header {
 
 
 .tag_index {
-  color: #fff;
+  color: $white;
   font-family: 'Raleway', sans-serif;
   background: #F58E7E;
   display: inline-block;
@@ -347,7 +345,7 @@ div.contents.row {
     background-size: cover;
     background-position: center center;
     border-radius: 3px;
-    box-shadow: 0 0 10px rgba(#292929,0.2);
+    box-shadow: 0 0 10px rgba($black,0.2);
     &:after {
       content: '';
       position: absolute;
@@ -356,7 +354,7 @@ div.contents.row {
       left: 0;
       right: 0;
 
-      @include filter-gradient(#000000, #a60000, vertical);
+      @include filter-gradient($black, #a60000, vertical);
       @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
       z-index: 1;
       border-radius: 3px;
@@ -405,6 +403,7 @@ div.contents.row {
           a {
             display: block;
             padding: 5px;
+            color: $dark;
             &:hover {
               background-color: $green;
               color: $white;
@@ -422,7 +421,7 @@ div.contents.row {
       font-size: 20px;
       z-index: 2;
       font-weight: bold;
-      text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
+      text-shadow: 0 0 2px $black, 0 0 1px $black, 0 0 1px $black;
     }
     .name {
       position: absolute;
@@ -434,13 +433,6 @@ div.contents.row {
 
       a {
         @include fav_a;
-        // display: block;
-        // font-size: 9px;
-        // color: $white;
-        // text-decoration: none;
-        // &:hover {
-        //   color: $dark;
-        // }
       }
       span {
         font-size: 9px;
@@ -456,7 +448,7 @@ div.contents.row {
     margin: 50px auto;
     padding: 120px;
 
-    box-shadow: 0 0 10px rgba(#292929,0.2);
+    box-shadow: 0 0 10px rgba($black,0.2);
     background-color: $white;
     box-sizing: border-box;
     text-align: center;
@@ -476,7 +468,7 @@ div.contents.row {
 }
 .user_page {
   display: inline-block;
-  color: white;
+  color: $white;
   font-family: "ほのか明朝";
 }
 
@@ -489,7 +481,7 @@ div.contents.row {
 
  //show画面用
 div.contents_show.row {  
-  background-color: lightgray;
+  background-color: $lightGray;
   margin-top: 50px;
   h2 {
     font-weight: normal;
@@ -508,7 +500,7 @@ div.contents_show.row {
     background-size: cover;
     background-position: center center;
     border-radius: 3px;
-    box-shadow: 0 0 10px rgba(#292929,0.2);
+    box-shadow: 0 0 10px rgba($black,0.2);
     &:after {
       content: '';
       position: absolute;
@@ -517,7 +509,7 @@ div.contents_show.row {
       left: 0;
       right: 0;
 
-      @include filter-gradient(#000000, #a60000, vertical);
+      @include filter-gradient($black, #a60000, vertical);
       @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
       z-index: 1;
       border-radius: 3px;
@@ -581,7 +573,7 @@ div.contents_show.row {
           a {
             display: block;
             padding: 5px;
-            color: lightgray;
+            color: $lightGray;
             &:hover {
               background-color: $green;
               color: $white;
@@ -599,7 +591,7 @@ div.contents_show.row {
       font-size: 20px;
       z-index: 2;
       font-weight: bold;
-      text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
+      text-shadow: 0 0 2px $black, 0 0 1px $black, 0 0 1px $black;
     }
 
     span.tag {
@@ -615,10 +607,10 @@ div.contents_show.row {
       font-size: 20px;
       a {
         display: block;
-        color: #aaa;
+        color: $dark;
         &:hover {
           text-decoration: underline;
-          color: #aaa;
+          color: $dark;
         }
       }
       span {
@@ -632,7 +624,7 @@ div.contents_show.row {
     margin: 50px auto;
     padding: 120px;
 
-    box-shadow: 0 0 10px rgba(#292929,0.2);
+    box-shadow: 0 0 10px rgba($black,0.2);
     background-color: $white;
     box-sizing: border-box;
     text-align: center;
@@ -648,7 +640,7 @@ div.contents_show.row {
 
 .pagination {
   margin: 20px auto;
-  color: whitesmoke;
+  color: $lightGray;
 }
 
 .search-bar {
@@ -657,7 +649,7 @@ div.contents_show.row {
   align-items: center;
   %p.user_page {
     display: inline-block;
-    color: white;
+    color: $white;
     font-family: "ほのか明朝";
   }
   .search-form {
@@ -724,7 +716,7 @@ form {
 }
 .container {
   @include boxBase(20px 0 ,30px);
-  box-shadow: 0 0 10px rgba(#292929,0.2);
+  box-shadow: 0 0 10px rgba($black,0.2);
   background-color: $white;
   box-sizing: border-box;
   
@@ -732,7 +724,6 @@ form {
 .comments {
   padding: 5px;
   margin-top: 15px;
-  // color: gray;
   a {
     color: $green;
     &:hover {
@@ -741,13 +732,11 @@ form {
   }
 }
 
-
-
 .like-btn {
   width: 20px;
   height: 20px;
   font-size: 25px;
-  color: #808080; 
+  color: $dark; 
   margin-left: 20px;
   &:hover {
     color: #e54747;
@@ -761,7 +750,7 @@ form {
   color: #e54747;
   margin-left: 20px;
   &:hover {
-    color: #808080;
+    color: $dark;
   }
   }
 
@@ -774,10 +763,6 @@ footer {
   }
 }
 
-
-
-
-
 .content_post-user {
   margin: 10px;
   padding: 30px;
@@ -787,7 +772,7 @@ footer {
   background-size: cover;
   background-position: center center;
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(#292929,0.2);
+  box-shadow: 0 0 10px rgba($black,0.2);
   &:after {
     content: '';
     position: absolute;
@@ -796,7 +781,7 @@ footer {
     left: 0;
     right: 0;
 
-    @include filter-gradient(#000000, #a60000, vertical);
+    @include filter-gradient($black, #a60000, vertical);
     @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
     z-index: 1;
     border-radius: 3px;
@@ -860,7 +845,7 @@ footer {
       width: 25px;
       height: 30px;
       font-size: 25px;
-      color: #808080; 
+      color: $dark; 
       margin-left: 20px;
       }
      
@@ -881,7 +866,7 @@ footer {
     font-size: 20px;
     z-index: 2;
     font-weight: bold;
-    text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
+    text-shadow: 0 0 2px $black, 0 0 1px $black, 0 0 1px $black;
   }
   span.name {
     position: absolute;
@@ -892,10 +877,10 @@ footer {
     font-size: 13px;
     a {
       display: block;
-      color: #aaa;
+      color: $dark;
       &:hover {
         text-decoration: none;
-        color: #aaa;
+        color: $dark;
       }
     }
     span {
