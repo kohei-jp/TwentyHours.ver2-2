@@ -1,9 +1,8 @@
 #img_field {
   font-size: 15px;
-  margin-top: 10px;
-  padding: 5px 8px;
-  border: solid 1px lightgray;
-  color: #666;
+  margin: 5px 10px;
+  border: 1px solid $gray;
+  color: $darkGray;
   position: relative;
   padding: 0;
   border-radius: 5px;
@@ -13,12 +12,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: #fff;
+  background-color: $white;
   overflow: hidden;
   box-sizing: border-box;
   transition: 0.3s ease-out;
   text-align: center;
-  margin: 0 auto;
 }
 
 .preview{
@@ -27,7 +25,7 @@
 
 #img_field i {
   font-size: 100px;
-  color: #aaa;
+  color: $darkGray;
   line-height: 250px;
   margin: 0 auto;
   transition: 0.3s ease-out;
@@ -50,6 +48,6 @@
 #img_field:hover i {
   transition: 0.3s ease-out;
   display: block;
-  color: #fff;
+  color: $white;
 }
 

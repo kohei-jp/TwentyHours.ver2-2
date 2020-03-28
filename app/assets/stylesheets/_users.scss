@@ -1,3 +1,15 @@
+$white: #ffffff;
+
+  //mixin
+  @mixin boxBase($margin: 0, $padding: o) {
+    margin: $margin;
+    padding: $padding;
+  }
+
+  @mixin boxSize($height: 10rem, $width: 10rem) {
+    height: $height;
+    width: $width;
+  }
 
 .image-title{
 	font-size: 14px;
@@ -15,8 +27,7 @@
 	margin: 1em auto;
 }
 .cp_tab > input[type='radio'] {
-	margin: 0;
-	padding: 0;
+	@include boxBase;
 	border: none;
 	border-radius: 0;
 	outline: none;
@@ -29,7 +40,7 @@
 .cp_tab .cp_tabpanel {
   display: none;
   span{
-    color: white;
+    color: $white;
   }
 }
 .cp_tab > input:first-child:checked ~ .cp_tabpanels > .cp_tabpanel:first-child,
@@ -48,7 +59,7 @@
 	cursor: pointer;
 	border: 1px solid transparent;
   border-bottom: 0;
-  color: white;
+  color: $white;
 }
 .cp_tab > label:hover,
 .cp_tab > input:focus + label {
@@ -57,7 +68,7 @@
 .cp_tab > input:checked + label {
 	margin-bottom: -1px;
 	border-color: #cccccc;
-	border-bottom: 1px solid #ffffff;/*背景色と同じ*/
+	border-bottom: 1px solid $white;/*背景色と同じ*/
 	border-radius: 6px 6px 0 0;
 }
 .cp_tab .cp_tabpanel {
@@ -87,7 +98,7 @@
         display: inline-block;
         position: relative;
         text-align: center;
-        color: white;
+        color: $white;
         font-family: Lato;
         font-weight:100;
         margin: 2rem;
@@ -110,8 +121,7 @@
         }
     }
     svg {
-        width: 10rem;
-        height: 10rem;
+        @include boxSize;
         &:nth-child(2) {
             position: absolute;
             left: 0;
@@ -132,8 +142,7 @@
 
 .container-show {
   background-color: rgba(0, 0,0,0.3);
-  color: white;
-  height: 450px;
-  width: 100%;
+  color: $white;
+  @include boxSize(450px, 100%);
   padding: 20px 10px 10px 10px;
 }

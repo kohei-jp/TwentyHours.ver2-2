@@ -1,15 +1,6 @@
 @import "compass";
 
-$accent: #57C3E9;
-$dark: #666;
-$darkGray: #999999;
-$gray: #D8D8D8;
-$lightGray: #f5f5f3;
-$white: #ffffff;
-$green: #9ec34b;
-$black: #000;
-
-//mixin
+  //mixin
 @mixin boxBase($margin: 30px auto, $padding: 10px) {
   margin: $margin;
   padding: $padding;
@@ -21,6 +12,10 @@ $black: #000;
   margin: $margin;
 }
 
+@mixin boxSize($height: 100%, $width: 100%) {
+  height: $height;
+  width: $width;
+}
 @mixin fav_a {
   display: block;
   font-size: 9px;
@@ -30,6 +25,93 @@ $black: #000;
     color: $dark;
   }
 }
+@mixin content_after{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include filter-gradient($black, #a60000, vertical);
+  @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
+  z-index: 1;
+  border-radius: 3px;
+}
+
+@mixin more {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 30px;
+  z-index: 2;
+  // @include boxSize(100px,80px);
+  height: 100px;
+  width: 80px;
+  text-align: right;
+}
+
+@mixin more_list{
+  position: absolute;
+  text-align: left;
+  width: 70px;
+  right: 0;
+  font-size: 12px;
+  background-color: $white;
+  border: 1px solid $white;
+  display: none;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  li {
+    border-bottom: 1px solid $white;
+    &:last-child {
+      border-bottom: 0;
+    }
+    a {
+      display: block;
+      padding: 5px;
+      color: $dark;
+      &:hover {
+        background-color: $green;
+        color: $white;
+      }
+    }
+  }
+}
+
+@mixin content-p{
+  position: absolute;
+  left: 30px;
+  margin: 0;
+  font-size: 20px;
+  z-index: 2;
+  font-weight: bold;
+  text-shadow: 0 0 2px $black, 0 0 1px $black, 0 0 1px $black;
+}
+
+@mixin content-success{
+  text-align: center;
+  margin: 50px auto;
+  padding: 120px;
+  box-shadow: 0 0 10px rgba($black,0.2);
+  background-color: $white;
+  box-sizing: border-box;
+  text-align: center;
+  h3 {
+    @include baseMargin;
+  }
+}
+
+@mixin content_post {
+  @include boxBase(10px,30px);
+  position: relative;
+  color: $white;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba($black,0.2);
+}
+
+
 
 body {
   height: 100%;
@@ -38,11 +120,11 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6,body {
-line-height: 1.57;
-  letter-spacing: 0.15em;
+  line-height: 25px;
+  letter-spacing: 2px;
   font-size: 16px;
   color: $dark;
-  font-family: "ほのか明朝";
+  font-family: "mono-space";
   margin: 0;
 }
 
@@ -86,9 +168,8 @@ a {
 }
 
 .btn-box:before, .btn-box:after {
-  width: 100%;
-  height: 100%;
-  z-index: 3;
+  @include boxSize;
+  z-index: 2;
   content: "";
   position: absolute;
   top: 0;
@@ -177,8 +258,7 @@ header.header {
       display: block;
       float: left;
       margin-left: 30px;
-      width: 150px;
-      height: 50px;
+      @include boxSize(50px,150px);
       font-size: 1em;
       cursor: pointer;
       position: relative;
@@ -232,21 +312,18 @@ header.header {
 }
 
 .title{
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   color: $white;
 }
 
 .attive{
   margin: 20px auto 0;
-  width: 680px;
-  height: 320px;
+  @include boxSize(320px,680px);
   &--area{
     background-color: $black;
     font-size: 14px;
-    height: 200px;
+    @include boxSize(200px,660px);
     overflow: scroll;
-    width: 660px;
     color: $green;
     white-space: nowrap;
     &__success{
@@ -258,8 +335,7 @@ header.header {
 
 /* スクロールの幅の設定 */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  @include boxSize(10px,10px);
 }
 
 /* スクロールの背景の設定 */
@@ -280,11 +356,9 @@ header.header {
   font-family: 'Raleway', sans-serif;
   background: #F58E7E;
   display: inline-block;
-  height: 30px;
-  width: 115px;
+  @include boxSize(30px,115px);
   line-height: 30px;
-  margin: 0 10px 5px 5px;
-  padding: 0 10px;
+  @include boxBase(0 10px 5px 5px,0 10px);
   position: relative;
 }
 .show{
@@ -337,8 +411,7 @@ div.contents.row {
 
   .content_post {
     width: calc(100% / 3.4);/*3等分*/
-    margin: 10px;
-    padding: 12px 70px 10px 13px;
+    @include boxBase(10px,12px 70px 10px 13px);
     position: relative;
     height: 200px;
     color: $white;
@@ -347,17 +420,7 @@ div.contents.row {
     border-radius: 3px;
     box-shadow: 0 0 10px rgba($black,0.2);
     &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-
-      @include filter-gradient($black, #a60000, vertical);
-      @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
-      z-index: 1;
-      border-radius: 3px;
+      @include content_after;
       .user-initial{
         width: initial;
       }
@@ -373,55 +436,18 @@ div.contents.row {
     }
 
     .more {
-      position: absolute;
-      cursor: pointer;
-      top: 20px;
-      right: 30px;
-      z-index: 2;
-      height: 100px;
-      width: 80px;
-      text-align: right;
+      @include more;
       &:hover ul.more_list {
         display: block;
       }
       ul.more_list {
-        position: absolute;
-        text-align: left;
-        width: 70px;
-        right: 0;
-        font-size: 12px;
-        background-color: $white;
-        border: 1px solid $white;
-        display: none;
-        box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        border-radius: 3px;
-        li {
-          border-bottom: 1px solid $white;
-          &:last-child {
-            border-bottom: 0;
-          }
-          a {
-            display: block;
-            padding: 5px;
-            color: $dark;
-            &:hover {
-              background-color: $green;
-              color: $white;
-            }
-          }
-        }
+        @include more_list;
       }
     }
 
 
     p {
-      position: absolute;
-      left: 30px;
-      margin: 0;
-      font-size: 20px;
-      z-index: 2;
-      font-weight: bold;
-      text-shadow: 0 0 2px $black, 0 0 1px $black, 0 0 1px $black;
+      @include content-p;
     }
     .name {
       position: absolute;
@@ -444,17 +470,7 @@ div.contents.row {
     background-image: url(coffee.jpg);
   }
   .success {
-    text-align: center;
-    margin: 50px auto;
-    padding: 120px;
-
-    box-shadow: 0 0 10px rgba($black,0.2);
-    background-color: $white;
-    box-sizing: border-box;
-    text-align: center;
-    h3 {
-      @include baseMargin;
-    }
+    @include content-success;
   }
 } //div.content row用
 
@@ -492,27 +508,10 @@ div.contents_show.row {
     }
   }
   .content_post_show {
-    margin: 10px;
-    padding: 30px;
-    position: relative;
+    @include content-post;
     height: 500px;
-    color: $white;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 3px;
-    box-shadow: 0 0 10px rgba($black,0.2);
     &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-
-      @include filter-gradient($black, #a60000, vertical);
-      @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
-      z-index: 1;
-      border-radius: 3px;
+      @include content_after;
     }
 
     .left_low_box {
@@ -540,14 +539,7 @@ div.contents_show.row {
       left: 10px;
     }
     .more_show {
-      position: absolute;
-      cursor: pointer;
-      top: 20px;
-      right: 30px;
-      z-index: 2;
-      height: 100px;
-      width: 80px;
-      text-align: right;
+      @include more;
       &:hover ul.more_list_show {
         display: block;
       }
@@ -555,43 +547,13 @@ div.contents_show.row {
         @include fav_a;
       }
       ul.more_list_show {
-        position: absolute;
-        text-align: left;
-        width: 70px;
-        right: 0;
-        font-size: 12px;
-        background-color: $white;
-        border: 1px solid $white;
-        display: none;
-        box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        border-radius: 3px;
-        li {
-          border-bottom: 1px solid $white;
-          &:last-child {
-            border-bottom: 0;
-          }
-          a {
-            display: block;
-            padding: 5px;
-            color: $lightGray;
-            &:hover {
-              background-color: $green;
-              color: $white;
-            }
-          }
-        }
+        @include more_list;
       }
     }
 
 
     p {
-      position: absolute;
-      left: 30px;
-      margin: 0;
-      font-size: 20px;
-      z-index: 2;
-      font-weight: bold;
-      text-shadow: 0 0 2px $black, 0 0 1px $black, 0 0 1px $black;
+      @include content-p;
     }
 
     span.tag {
@@ -620,17 +582,7 @@ div.contents_show.row {
     }
   }
   .success {
-    text-align: center;
-    margin: 50px auto;
-    padding: 120px;
-
-    box-shadow: 0 0 10px rgba($black,0.2);
-    background-color: $white;
-    box-sizing: border-box;
-    text-align: center;
-    h3 {
-      @include baseMargin;
-    }
+    @include content-success;
   }
 } //div.content row用 show画面用
 
@@ -678,8 +630,7 @@ div.contents_show.row {
 .last_bar {
   position: absolute;
   top: 110px;
-  width: 80px;
-  height: 40px;
+  @include boxSize(40px,80px);
   padding-top: 10px;
   text-align: center;
   border-top: solid;
@@ -698,7 +649,7 @@ form {
   }
   input,textarea {
     width: 100%;
-    @include boxBase(5px 0 15px,10px);
+    @include boxBase(5px 10px 15px 10px,10px);
     border: 1px solid $gray;
     border-radius: 5px;
     font-family: "游ゴシック", "YuGothic";
@@ -722,8 +673,7 @@ form {
   
 }
 .comments {
-  padding: 5px;
-  margin-top: 15px;
+  @include boxBase(15px 0 0 0,5px);
   a {
     color: $green;
     &:hover {
@@ -733,8 +683,7 @@ form {
 }
 
 .like-btn {
-  width: 20px;
-  height: 20px;
+  @include boxSize(20px,20px);
   font-size: 25px;
   color: $dark; 
   margin-left: 20px;
@@ -744,8 +693,7 @@ form {
   }
  
  .unlike-btn {
-  width: 20px;
-  height: 20px;
+  @include boxSize(20px,20px);
   font-size: 24px;
   color: #e54747;
   margin-left: 20px;
@@ -764,23 +712,10 @@ footer {
 }
 
 .content_post-user {
-  margin: 10px;
-  padding: 30px;
-  position: relative;
+  @include content-post;
   height: 200px;
-  color: $white;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 3px;
-  box-shadow: 0 0 10px rgba($black,0.2);
   &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
+    @include content_after;
     @include filter-gradient($black, #a60000, vertical);
     @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
     z-index: 1;
@@ -808,8 +743,7 @@ footer {
     top: 20px;
     right: 30px;
     z-index: 2;
-    height: 100px;
-    width: 80px;
+    @include boxSize(100px,80px);
     text-align: right;
     &:hover ul.more_list {
       display: block;
@@ -842,16 +776,14 @@ footer {
       }
     }
     .like-btn {
-      width: 25px;
-      height: 30px;
+      @include boxSize(30px,25px);
       font-size: 25px;
       color: $dark; 
       margin-left: 20px;
       }
      
      .unlike-btn {
-      width: 25px;
-      height: 30px;
+      @include boxSize(30px,25px);
       font-size: 25px;
       color: #e54747;
       margin-left: 20px;
