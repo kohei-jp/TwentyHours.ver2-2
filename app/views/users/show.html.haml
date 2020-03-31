@@ -79,64 +79,64 @@
               title: {
               display: true,
               text: '学習時間の可視化',
-              fontColor: "#FFF",             // 目盛りの色
-              fontSize: 12                   // フォントサイズ
+              fontColor: "#FFF",
+              fontSize: 12
               },
               responsive: true,
               
               scales: {
                 xAxes: [{   
-                    scaleLabel: {             
-                      display: true,          
+                    scaleLabel: {
+                      display: true,
                       labelString: 'date', 
-                      fontColor: "＃FFF",             // 文字の色
+                      fontColor: "＃FFF",
                       fontFamily: "sans-serif",
-                      fontSize: 12                   // フォントサイズ
+                      fontSize: 12
                     },
                     ticks: {
-                          fontColor: "#FFF",         
+                          fontColor: "#FFF",
                           fontSize: 12,
                           beginAtZero: true,
-                          max: 5,                
+                          max: 5,
                       },
                 }],
                   yAxes: [{
                       id: "y-axis-1",
                       type: "linear", 
                       position: "right",
-                      scaleLabel: {                  // 軸ラベル
-                      display: true,                 // 表示の有無
-                      labelString: 'Toal time(h)',     // ラベル
+                      scaleLabel: {
+                      display: true,
+                      labelString: 'Toal time(h)',
                       fontFamily: "sans-serif",
-                      fontColor: "＃FFF",             // 文字の色
+                      fontColor: "＃FFF",
                       fontFamily: "sans-serif",
-                      fontSize: 12                   // フォントサイズ
+                      fontSize: 12
                       },
                       ticks: {
                           max: 100,
                           min: 0,
                           stepSize: 10,
-                          fontColor: "#FFF",             // 目盛りの色
-                          fontSize: 12                   // フォントサイズ
+                          fontColor: "#FFF",
+                          fontSize: 12
                       },
                   }, {
                       id: "y-axis-2",
                       type: "linear", 
                       position: "left",
-                      scaleLabel: {                  // 軸ラベル
-                      display: true,                 // 表示の有無
-                      labelString: 'Time(h)',     // ラベル
+                      scaleLabel: {
+                      display: true,
+                      labelString: 'Time(h)',
                       fontFamily: "sans-serif",
-                      fontColor: "＃FFF",             // 文字の色
+                      fontColor: "＃FFF",
                       fontFamily: "sans-serif",
-                      fontSize: 12                   // フォントサイズ
+                      fontSize: 12
                       },
                       ticks: {
                           max: 20,
                           min: 0,
                           stepSize: 2,
-                          fontColor: "#FFF",             // 目盛りの色
-                          fontSize: 12                   // フォントサイズ
+                          fontColor: "#FFF",
+                          fontSize: 12
                       },
                       gridLines: {
                           drawOnChartArea: false, 
@@ -144,14 +144,6 @@
                   }],
               },
           };
-
-
-
-
-
-
-
-
 
       -# お気に入り
       #second_tab01.cp_tabpanel

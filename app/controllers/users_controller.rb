@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     # fav用
     @times = Tweet.group('user_id, tag_id').sum(:time)
     @favorite_tweets = @user.favorite_tweets
-    # favorite_tweetsとは、user.rbで定義した、favしたtweetsテーブルのこと
+
     # Chart.js用
     @mytimes = @user.tweets.group_by_day(:created_at).sum(:time).to_a
     @mytimes_date = @mytimes.transpose[0].to_a
@@ -25,10 +25,7 @@ class UsersController < ApplicationController
       @sums << sum
     end
 
-    # user = User.find(params[:id]) #follow用
     @fallow_users = @user.followings # follow用
-
-    # user = User.find(params[:id]) # follower用
     @follower_users = @user.followers # follower用
   end
 

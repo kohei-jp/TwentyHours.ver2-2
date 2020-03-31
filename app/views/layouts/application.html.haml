@@ -4,9 +4,8 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title 20Hours
     
-    = stylesheet_link_tag 'application', media: 'all'#, 'data-turbolinks-track' => true
-    = javascript_include_tag 'application'#, 'data-turbolinks-track' => true
-    -# = javascript_include_tag "//www.google.com/jsapi", "chartkick" => true
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css", :rel => "stylesheet"}/
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js", :type => "text/javascript"}
     = csrf_meta_tags #ajaxを読み込む際のcsrf対策の記述

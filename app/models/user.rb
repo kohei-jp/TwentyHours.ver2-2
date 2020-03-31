@@ -14,8 +14,6 @@ class User < ApplicationRecord
   has_many :tags, through: :tweets
   has_many :favorites
   has_many :favorite_tweets, through: :favorites, source: :tweet
-  # "has_many :tweets, through: :favorites"の所、他と重複するため、favorite_tweetsに名称を変更している。
-  # opで参照元のモデルを"source: :tweet"としているからOK。
 
   # 自分がフォローしているユーザーとの関連
   # フォローする側のUserから見て、フォローされる側のUserを(中間テーブルを介して)集める。なので親はfollowing_id(フォローする側)

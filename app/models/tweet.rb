@@ -21,6 +21,6 @@ class Tweet < ApplicationRecord
     return Tweet.all unless search
 
     search = "%#{search}%"
-    Tweet.find_by_sql(["select * from tweets where text like ? ", search]) # この1行
+    Tweet.find_by_sql(["select * from tweets where text like ? ", search])
   end
 end
