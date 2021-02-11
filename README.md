@@ -101,10 +101,6 @@ https://20hoursapp.com
 ## 💬 Usage
 https://github.com/kohei-jp/TwentyHours.ver2-2.git
 
-## 👀 Author's blog
-https://xkoh.hatenadiary.com/archive/2020
-<br>
-
 ## ■ ER図
 ￼￼<img width="70%" alt="ER図" src="https://user-images.githubusercontent.com/55340851/75799983-3f922a80-5dbc-11ea-885b-a2f554fded03.png">
 
